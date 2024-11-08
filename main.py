@@ -30,8 +30,9 @@ J = ['B1', 'B2']
 cost_backup = {'B1': 200, 'B2': 250}
 
 # Distance from Candidate Warehouse 
-dist_backup = {('B1', 'W1'): 8, ('B1', 'W2'): 9, ('B1', 'W3'): 10,
-               ('B2', 'W1'): 7, ('B2', 'W2'): 12, ('B2', 'W3'): 11}
+dist_backup = {('W1', 'B1'): 8, ('W1', 'B2'): 10,
+               ('W2', 'B1'): 6, ('W2', 'B2'): 11,
+               ('W3', 'B1'): 9, ('W3', 'B2'): 7}
 
 # Set up the alpha
 alpha = 0.5
@@ -43,6 +44,39 @@ alpha = 0.5
 # MODEL
 model = gp.Model('Cusco_Earthquake')
 
+# Decision Variables
+x = model.addVars(I, vtype=GRB.BINARY, name='x')  # Main Warehouse Selection [Xi]
+z = model.addVars(J, vtype=GRB.BINARY, name='z')  # Backup facility selection [Zk]
+y = model.addVars(I, C, vtype=GRB.BINARY, name='y')  # Communities being covered by Warehouses [Yij]
+w = model.addVars(I, J, vtype=GRB.BINARY, name='w')  # Back-Up facilities covering Main Warehouse
+
+# Objective Function
+model.setObjective(
+    gp.quicksum(cost_main[i] * x[i] for i in I) + 
+    gp.quicksum(demand[j] * dist_main[i, j] * y[i, j] for i in I for j in C) +
+    alpha * (
+        gp.quicksum(cost_backup[k] * z[k] for k in J) + 
+        gp.quicksum(dist_backup[i, k] * w[i, k] for i in I for k in J)
+    ),
+    GRB.MINIMIZE
+)
+
+# Constraints
+
+# 1. Coverage of Communities by Main Warehouse
+for j in C:
+    model.addConstr(gp.quicksum(y[i,j] for i in I) >= 1, f'CommunityCoverage_{j}')
+
+# 2. Service of Communities by Selected Warehouses
+for i in I:
+    for j in C:
+        model.addConstr(y[i,j] <= x[i], f'ServeIfOpen_{i}_{j}')
+
+# 3. Backup Facility Coverage of Warehouses
+
+
+# Solve the model
+model.optimize()
 
 print('Success')
 
