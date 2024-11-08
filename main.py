@@ -73,10 +73,45 @@ for i in I:
         model.addConstr(y[i,j] <= x[i], f'ServeIfOpen_{i}_{j}')
 
 # 3. Backup Facility Coverage of Warehouses
+for i in I:
+    model.addConstr(gp.quicksum(w[i,k] for k in J) >= x[i], f'BackupCover_{i}')
 
+# 4. Association of Main Warehouses with BackUp Facilities
+for i in I:
+    for k in J:
+        model.addConstr(w[i,k] <= z[k], f'BackupOpenIfCovering_{i}_{k}')
 
 # Solve the model
 model.optimize()
+
+
+# Output Results
+# Output results
+if model.status == GRB.OPTIMAL:
+    print("Optimal solution found:")
+    print("\nMain warehouses to open:")
+    for i in I:
+        if x[i].x > 0.5:
+            print(f" - Open main warehouse at {i}")
+
+    print("\nBackup facilities to open:")
+    for k in J:
+        if z[k].x > 0.5:
+            print(f" - Open backup facility at {k}")
+
+    print("\nCommunity coverage by main warehouses:")
+    for i in I:
+        for j in C:
+            if y[i, j].x > 0.5:
+                print(f" - Community {j} is served by main warehouse {i}")
+
+    print("\nMain warehouse coverage by backup facilities:")
+    for i in I:
+        for k in J:
+            if w[i, k].x > 0.5:
+                print(f" - Main warehouse {i} is covered by backup facility {k}")
+else:
+    print("No optimal solution found.")
 
 print('Success')
 
