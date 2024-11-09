@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np 
 import networkx as nx 
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 
 ##############################################
 ################ DATA SECTION ################ 
@@ -208,7 +209,7 @@ pos = nx.spring_layout(G, seed=42)  # Fixed layout for consistency
 nx.draw(G, pos, with_labels=True, node_color=color_map, node_size=800, font_size=10, font_color='white', font_weight='bold', edge_color='gray', arrows=True)
 
 # Customize legend
-from matplotlib.lines import Line2D
+
 legend_elements = [
     Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
     Line2D([0], [0], marker='o', color='w', label='Warehouse', markerfacecolor='green', markersize=10),
