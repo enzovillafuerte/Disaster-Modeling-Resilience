@@ -1,5 +1,9 @@
 import gurobipy as gp 
 from gurobipy import GRB 
+import pandas as pd 
+import numpy as np 
+import networkx as nx 
+import matplotlib.pyplot as plt
 
 ##############################################
 ################ DATA SECTION ################ 
@@ -84,8 +88,6 @@ for i in I:
 # Solve the model
 model.optimize()
 
-
-# Output Results
 # Output results
 if model.status == GRB.OPTIMAL:
     print("Optimal solution found:")
@@ -105,6 +107,58 @@ if model.status == GRB.OPTIMAL:
             if y[i, j].x > 0.5:
                 print(f" - Community {j} is served by main warehouse {i}")
 
+    ############################################
+    # Community-to-Warehouse Connectivity Matrix
+    ############################################
+    community_warehouse_matrix = {}
+    print("\nCommunity-to-Warehouse Connectivity Matrix:")
+    for i in I:
+        for j in C:
+            if y[i, j].x > 0.5:
+                community_warehouse_matrix[(j, i)] = 1
+                print(f" - Community {j} is connected to main warehouse {i}")
+            else:
+                community_warehouse_matrix[(j, i)] = 0
+
+    # Display the matrix as a table
+    print("\nCommunity-to-Warehouse Matrix (1 if connected, 0 otherwise):")
+    print("   " + " ".join([f"{i}" for i in I]))
+    for j in C:
+        print(f"{j}: " + " ".join([str(community_warehouse_matrix[(j, i)]) for i in I]))
+
+    ############################################
+    # Warehouse-to-Backup Connectivity Matrix
+    ############################################
+
+    # Warehouse-to-Backup Connectivity Matrix
+    warehouse_backup_matrix = {}
+    print("\nWarehouse-to-Backup Connectivity Matrix:")
+    for i in I:
+        for k in J:
+            if w[i, k].x > 0.5:
+                warehouse_backup_matrix[(i, k)] = 1
+                print(f" - Main warehouse {i} is connected to backup facility {k}")
+            else:
+                warehouse_backup_matrix[(i, k)] = 0
+
+
+    # Display the matrix as a table
+    print("\nWarehouse-to-Backup Matrix (1 if connected, 0 otherwise):")
+    print("   " + " ".join([f"{k}" for k in J]))
+    for i in I:
+        print(f"{i}: " + " ".join([str(warehouse_backup_matrix[(i, k)]) for k in J]))
+
+    ############################################
+    # Backup-to-Community Connectivity Matrix
+    ############################################
+    # Step 1: Create the Backup-to-Community Matrix
+    backup_community_matrix = {}
+    for (warehouse, backup), wb_connected in warehouse_backup_matrix.items():
+        if wb_connected == 1:
+            for (community, wh), cw_connected in community_warehouse_matrix.items():
+                if wh == warehouse and cw_connected == 1:
+                    backup_community_matrix[(community, backup)] = 1
+
     print("\nMain warehouse coverage by backup facilities:")
     for i in I:
         for k in J:
@@ -112,6 +166,58 @@ if model.status == GRB.OPTIMAL:
                 print(f" - Main warehouse {i} is covered by backup facility {k}")
 else:
     print("No optimal solution found.")
+
+
+##############################################
+########## NETWORK REPRESENTATION ############ 
+##############################################
+
+G = nx.DiGraph()
+
+# Add nodes for Communities, Warehouses, and Backup Facilities
+for community in C:
+    G.add_node(community, label="Community", color='blue')
+for warehouse in I:
+    G.add_node(warehouse, label="Warehouse", color='green')
+for backup in J:
+    G.add_node(backup, label="Backup Facility", color='red')
+
+# Add edges for Community-to-Warehouse connections
+for (community, warehouse), connected in community_warehouse_matrix.items():
+    if connected == 1:
+        G.add_edge(warehouse, community)  # Warehouse serves Community
+
+# Add edges for Warehouse-to-Backup connections
+for (warehouse, backup), connected in warehouse_backup_matrix.items():
+    if connected == 1:
+        G.add_edge(warehouse, backup)  # Warehouse is backed up by Backup Facility
+
+# Add edges for Backup-to-Community connections (inheritance)
+for (community, backup), connected in backup_community_matrix.items():
+    if connected == 1:
+        G.add_edge(backup, community)  # Backup Facility directly connects to Community
+
+# Step 3: Visualize the network
+plt.figure(figsize=(10, 8))
+
+# Assign colors to nodes based on their type for clearer visualization
+color_map = [G.nodes[node]['color'] for node in G]
+
+# Draw the graph with node labels and colors
+pos = nx.spring_layout(G, seed=42)  # Fixed layout for consistency
+nx.draw(G, pos, with_labels=True, node_color=color_map, node_size=800, font_size=10, font_color='white', font_weight='bold', edge_color='gray', arrows=True)
+
+# Customize legend
+from matplotlib.lines import Line2D
+legend_elements = [
+    Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='Warehouse', markerfacecolor='green', markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='Backup Facility', markerfacecolor='red', markersize=10)
+]
+plt.legend(handles=legend_elements, loc='upper left')
+
+plt.title("Direct Network Connectivity Including Backup Facilities")
+plt.show()
 
 print('Success')
 
