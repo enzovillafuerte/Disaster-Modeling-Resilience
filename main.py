@@ -25,7 +25,7 @@ cost_main = {'W1': 500, 'W2': 450, 'W3': 550}
 # Distance from Candidate to Communities
 dist_main = {('W1', 'C1'): 10, ('W1', 'C2'): 15, ('W1', 'C3'): 20,
              ('W2', 'C1'): 12, ('W2', 'C2'): 18, ('W2', 'C3'): 14,
-             ('W3', 'C1'): 14, ('W3', 'C2'): 13, ('W3', 'C3'): 11}
+             ('W3', 'C1'): 24, ('W3', 'C2'): 13, ('W3', 'C3'): 11}
 
 
 ## Backup Facilities Candidates
