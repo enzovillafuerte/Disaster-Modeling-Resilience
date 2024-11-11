@@ -46,10 +46,10 @@ alpha = 0.5
 ################ OPT MODELING ################ 
 ##############################################
 
-# MODEL
+# Naming the model
 model = gp.Model('Cusco_Earthquake')
 
-# Decision Variables
+# Define decision variables
 x = model.addVars(I, vtype=GRB.BINARY, name='x')  # Main Warehouse Selection [Xi]
 z = model.addVars(J, vtype=GRB.BINARY, name='z')  # Backup facility selection [Zk]
 y = model.addVars(I, C, vtype=GRB.BINARY, name='y')  # Communities being covered by Warehouses [Yij]
@@ -68,25 +68,25 @@ model.setObjective(
 
 # Constraints
 
-# 1. Coverage of Communities by Main Warehouse
+# C1: Coverage of Communities by Main Warehouse
 for j in C:
     model.addConstr(gp.quicksum(y[i,j] for i in I) >= 1, f'CommunityCoverage_{j}')
 
-# 2. Service of Communities by Selected Warehouses
+# C2: Service of Communities by Selected Warehouses
 for i in I:
     for j in C:
         model.addConstr(y[i,j] <= x[i], f'ServeIfOpen_{i}_{j}')
 
-# 3. Backup Facility Coverage of Warehouses
+# C3: Backup Facility Coverage of Warehouses
 for i in I:
     model.addConstr(gp.quicksum(w[i,k] for k in J) >= x[i], f'BackupCover_{i}')
 
-# 4. Association of Main Warehouses with BackUp Facilities
+# C4: Association of Main Warehouses with BackUp Facilities
 for i in I:
     for k in J:
         model.addConstr(w[i,k] <= z[k], f'BackupOpenIfCovering_{i}_{k}')
 
-# Solve the model
+# Solvingd the model
 model.optimize()
 
 # Output results
