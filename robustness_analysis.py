@@ -105,11 +105,14 @@ def main(argv):
     pylab.close(1)
 
 
-
-
+if __name__ == "__main__":
+    main(sys.argv[1:])
 
 
 # 1st Install this libraries using pip. Check out Quito's code
 print("Success")
 
 # Windows: py robustness_analysis.py 'sample_network.gml'
+# Mac: python robustness_analysis.py 'sample_network.gml'
+# python robustness.py <infile> <outfile> <recalculate>
+# python robustness_analysis.py 'sample_network.gml' 'sample_output.pdf' True
