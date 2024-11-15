@@ -6,3 +6,5 @@ matplotlib
 igraph
 openpyxl
 geopandas
+folium
+contextily
