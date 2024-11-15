@@ -1,0 +1,2 @@
+Population Data -> INEI - National Directory of Municipalities of Populated Areas, 2023
+Assumption for Cusco -> Capacity Warehouse with pre-positioned supplies already in place for 56,000. Divide Cusco population by 56,000 and determine the demand for each community based on that coefficient.
