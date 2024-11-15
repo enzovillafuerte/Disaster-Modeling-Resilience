@@ -1,0 +1,3204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5bb6119e372cf097f729ba71bc949b19 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5bb6119e372cf097f729ba71bc949b19" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5bb6119e372cf097f729ba71bc949b19 = L.map(
+                "map_5bb6119e372cf097f729ba71bc949b19",
+                {
+                    center: [-13.52, -71.97],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6836442d0f0ad3286dcf14a6c444f3cd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6836442d0f0ad3286dcf14a6c444f3cd.addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var marker_1594c7e279858f079013c9374e9847ef = L.marker(
+                [-13.519166666666667, -71.97666666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_3842750513b7ff1d4c23907d45cea568 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1594c7e279858f079013c9374e9847ef.setIcon(icon_3842750513b7ff1d4c23907d45cea568);
+        
+    
+        var popup_aa5b8d24ac3edcd96136912b2dd24863 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b6932927b226f61f8d3ea21714f3c2a = $(`<div id="html_7b6932927b226f61f8d3ea21714f3c2a" style="width: 100.0%; height: 100.0%;">Cusco (Ciudad)<br>Population: 119148</div>`)[0];
+                popup_aa5b8d24ac3edcd96136912b2dd24863.setContent(html_7b6932927b226f61f8d3ea21714f3c2a);
+            
+        
+
+        marker_1594c7e279858f079013c9374e9847ef.bindPopup(popup_aa5b8d24ac3edcd96136912b2dd24863)
+        ;
+
+        
+    
+    
+            var marker_c98716dc59b3fc50e8023fa3fb27d8f3 = L.marker(
+                [-13.584722222222222, -72.05916666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_7b6962adb508c8fe34644a28c9f9203f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c98716dc59b3fc50e8023fa3fb27d8f3.setIcon(icon_7b6962adb508c8fe34644a28c9f9203f);
+        
+    
+        var popup_da9d7526f0bc24a3ee7f7b8e2a30ef09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c3f6c0f6ce0f16962ca213e0f4c5064 = $(`<div id="html_2c3f6c0f6ce0f16962ca213e0f4c5064" style="width: 100.0%; height: 100.0%;">Ccorca (Pueblo)<br>Population: 2410</div>`)[0];
+                popup_da9d7526f0bc24a3ee7f7b8e2a30ef09.setContent(html_2c3f6c0f6ce0f16962ca213e0f4c5064);
+            
+        
+
+        marker_c98716dc59b3fc50e8023fa3fb27d8f3.bindPopup(popup_da9d7526f0bc24a3ee7f7b8e2a30ef09)
+        ;
+
+        
+    
+    
+            var marker_aca1badabf00a83afa7fbd9527358f7a = L.marker(
+                [-13.494444444444444, -72.04472222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2d5a232c5420a9edc897ed81cbc1ff94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_aca1badabf00a83afa7fbd9527358f7a.setIcon(icon_2d5a232c5420a9edc897ed81cbc1ff94);
+        
+    
+        var popup_ab91dfd5b689377f84b953a259bf3517 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3df1b4e3017a275bad36081a8a52de47 = $(`<div id="html_3df1b4e3017a275bad36081a8a52de47" style="width: 100.0%; height: 100.0%;">Poroy (Pueblo)<br>Population: 13953</div>`)[0];
+                popup_ab91dfd5b689377f84b953a259bf3517.setContent(html_3df1b4e3017a275bad36081a8a52de47);
+            
+        
+
+        marker_aca1badabf00a83afa7fbd9527358f7a.bindPopup(popup_ab91dfd5b689377f84b953a259bf3517)
+        ;
+
+        
+    
+    
+            var marker_551182e74b07805ab31f2f0b581ad285 = L.marker(
+                [-13.544444444444444, -71.88361111111112],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_c31bfa78dd9829f62f5632bf189ca738 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_551182e74b07805ab31f2f0b581ad285.setIcon(icon_c31bfa78dd9829f62f5632bf189ca738);
+        
+    
+        var popup_ea987d7d3cfa2069664489c353b81ad1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7cbc977d3a4aa2ab5fca0da5bc7ed1ad = $(`<div id="html_7cbc977d3a4aa2ab5fca0da5bc7ed1ad" style="width: 100.0%; height: 100.0%;">San Jerónimo (Pueblo)<br>Population: 77751</div>`)[0];
+                popup_ea987d7d3cfa2069664489c353b81ad1.setContent(html_7cbc977d3a4aa2ab5fca0da5bc7ed1ad);
+            
+        
+
+        marker_551182e74b07805ab31f2f0b581ad285.bindPopup(popup_ea987d7d3cfa2069664489c353b81ad1)
+        ;
+
+        
+    
+    
+            var marker_602f2d8afcef5c0cb30afc87688f853f = L.marker(
+                [-13.530277777777778, -71.93694444444445],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_843e9f0bb0d02e5dcc754843e6989658 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_602f2d8afcef5c0cb30afc87688f853f.setIcon(icon_843e9f0bb0d02e5dcc754843e6989658);
+        
+    
+        var popup_aa8597f32bce2e55d7b1d304caed31ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a8c1c75d7d10ac81af2c3cfa9d77da0 = $(`<div id="html_3a8c1c75d7d10ac81af2c3cfa9d77da0" style="width: 100.0%; height: 100.0%;">San Sebastián (Pueblo)<br>Population: 144460</div>`)[0];
+                popup_aa8597f32bce2e55d7b1d304caed31ab.setContent(html_3a8c1c75d7d10ac81af2c3cfa9d77da0);
+            
+        
+
+        marker_602f2d8afcef5c0cb30afc87688f853f.bindPopup(popup_aa8597f32bce2e55d7b1d304caed31ab)
+        ;
+
+        
+    
+    
+            var marker_948f5e5cdee58aeaf69249408e72ee57 = L.marker(
+                [-13.525833333333335, -71.98305555555555],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_52ef1a0c5f18092f4dc855fefbb55680 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_948f5e5cdee58aeaf69249408e72ee57.setIcon(icon_52ef1a0c5f18092f4dc855fefbb55680);
+        
+    
+        var popup_c02b0f5863bfa2f821937bbbe7ea93c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4655aecac7844b7ca73892fac9af75f1 = $(`<div id="html_4655aecac7844b7ca73892fac9af75f1" style="width: 100.0%; height: 100.0%;">Santiago (Ciudad)<br>Population: 106739</div>`)[0];
+                popup_c02b0f5863bfa2f821937bbbe7ea93c2.setContent(html_4655aecac7844b7ca73892fac9af75f1);
+            
+        
+
+        marker_948f5e5cdee58aeaf69249408e72ee57.bindPopup(popup_c02b0f5863bfa2f821937bbbe7ea93c2)
+        ;
+
+        
+    
+    
+            var marker_f2bd8550668e31de328ed6445a6d02f4 = L.marker(
+                [-13.57, -71.82777777777777],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_d2b6342cec71cd0ca9abe646ca7775fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f2bd8550668e31de328ed6445a6d02f4.setIcon(icon_d2b6342cec71cd0ca9abe646ca7775fb);
+        
+    
+        var popup_0dbd9e4eb2a31765520cb12b85dedad7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_daf1b8619552932a7edd2fbf83520851 = $(`<div id="html_daf1b8619552932a7edd2fbf83520851" style="width: 100.0%; height: 100.0%;">Saylla (Pueblo)<br>Population: 9462</div>`)[0];
+                popup_0dbd9e4eb2a31765520cb12b85dedad7.setContent(html_daf1b8619552932a7edd2fbf83520851);
+            
+        
+
+        marker_f2bd8550668e31de328ed6445a6d02f4.bindPopup(popup_0dbd9e4eb2a31765520cb12b85dedad7)
+        ;
+
+        
+    
+    
+            var marker_2b8808632c50cdbf64e2f74689638b5b = L.marker(
+                [-13.52138888888889, -71.96666666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_37612cb918c247a1395feff5d303b8d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2b8808632c50cdbf64e2f74689638b5b.setIcon(icon_37612cb918c247a1395feff5d303b8d8);
+        
+    
+        var popup_714db23b6aba5bfeea3495daade0a9bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78f12c9aea418a764569b8d4204d1160 = $(`<div id="html_78f12c9aea418a764569b8d4204d1160" style="width: 100.0%; height: 100.0%;">Wanchaq (Ciudad)<br>Population: 61530</div>`)[0];
+                popup_714db23b6aba5bfeea3495daade0a9bd.setContent(html_78f12c9aea418a764569b8d4204d1160);
+            
+        
+
+        marker_2b8808632c50cdbf64e2f74689638b5b.bindPopup(popup_714db23b6aba5bfeea3495daade0a9bd)
+        ;
+
+        
+    
+    
+            var marker_815b12b126bb20598db793bbff129691 = L.marker(
+                [-13.919444444444444, -71.68361111111112],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_187f144c095850bae672d8dc74d78d80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_815b12b126bb20598db793bbff129691.setIcon(icon_187f144c095850bae672d8dc74d78d80);
+        
+    
+        var popup_8bf79f2262577db3e914acb05f4d6ecc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_672f492cc40b5e6f32c342d76e655ce2 = $(`<div id="html_672f492cc40b5e6f32c342d76e655ce2" style="width: 100.0%; height: 100.0%;">Acomayo (Villa)<br>Population: 4523</div>`)[0];
+                popup_8bf79f2262577db3e914acb05f4d6ecc.setContent(html_672f492cc40b5e6f32c342d76e655ce2);
+            
+        
+
+        marker_815b12b126bb20598db793bbff129691.bindPopup(popup_8bf79f2262577db3e914acb05f4d6ecc)
+        ;
+
+        
+    
+    
+            var marker_374ebcc63f59be78b0bd6e7e153c3b85 = L.marker(
+                [-14.057500000000001, -71.49333333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2313490920bb341049bcf532940ddecc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_374ebcc63f59be78b0bd6e7e153c3b85.setIcon(icon_2313490920bb341049bcf532940ddecc);
+        
+    
+        var popup_4c9f00d4ff838cfdff0e116a45f4c409 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfa1220ed19fd7b6f4ec901f24e3788c = $(`<div id="html_cfa1220ed19fd7b6f4ec901f24e3788c" style="width: 100.0%; height: 100.0%;">Acopia (Pueblo)<br>Population: 3121</div>`)[0];
+                popup_4c9f00d4ff838cfdff0e116a45f4c409.setContent(html_cfa1220ed19fd7b6f4ec901f24e3788c);
+            
+        
+
+        marker_374ebcc63f59be78b0bd6e7e153c3b85.bindPopup(popup_4c9f00d4ff838cfdff0e116a45f4c409)
+        ;
+
+        
+    
+    
+            var marker_0d9fa71438d15eb964fbddf1d7a1e7e1 = L.marker(
+                [-13.95111111111111, -71.73805555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_46383064b268501d98451f3159c16e6f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0d9fa71438d15eb964fbddf1d7a1e7e1.setIcon(icon_46383064b268501d98451f3159c16e6f);
+        
+    
+        var popup_64e5b2a652197a337c15aa387b632fa4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23d92a9ab134d22a31fcda54d3a19333 = $(`<div id="html_23d92a9ab134d22a31fcda54d3a19333" style="width: 100.0%; height: 100.0%;">Acos (Pueblo)<br>Population: 2328</div>`)[0];
+                popup_64e5b2a652197a337c15aa387b632fa4.setContent(html_23d92a9ab134d22a31fcda54d3a19333);
+            
+        
+
+        marker_0d9fa71438d15eb964fbddf1d7a1e7e1.bindPopup(popup_64e5b2a652197a337c15aa387b632fa4)
+        ;
+
+        
+    
+    
+            var marker_66f4ac0a27cb2750a4f93c0e39ba4252 = L.marker(
+                [-14.120277777777778, -71.47305555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_6ad566a0d9fdf2c4b386f64cc29b03c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_66f4ac0a27cb2750a4f93c0e39ba4252.setIcon(icon_6ad566a0d9fdf2c4b386f64cc29b03c0);
+        
+    
+        var popup_2608ad42b41e018dbc40f82563cd1e52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b8fa308cb9be657c5b15b656debd5ddd = $(`<div id="html_b8fa308cb9be657c5b15b656debd5ddd" style="width: 100.0%; height: 100.0%;">Mosoc Llacta (Pueblo)<br>Population: 983</div>`)[0];
+                popup_2608ad42b41e018dbc40f82563cd1e52.setContent(html_b8fa308cb9be657c5b15b656debd5ddd);
+            
+        
+
+        marker_66f4ac0a27cb2750a4f93c0e39ba4252.bindPopup(popup_2608ad42b41e018dbc40f82563cd1e52)
+        ;
+
+        
+    
+    
+            var marker_5d30c8e86dd401a206679ce8b55dc245 = L.marker(
+                [-14.03361111111111, -71.57416666666666],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ba55c47c585017a3473ae037b1e86b74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5d30c8e86dd401a206679ce8b55dc245.setIcon(icon_ba55c47c585017a3473ae037b1e86b74);
+        
+    
+        var popup_e678ad86219cfe1021f432f31268039c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0f0082308debe787869d875a809af63 = $(`<div id="html_e0f0082308debe787869d875a809af63" style="width: 100.0%; height: 100.0%;">Pomacanchi (Pueblo)<br>Population: 7515</div>`)[0];
+                popup_e678ad86219cfe1021f432f31268039c.setContent(html_e0f0082308debe787869d875a809af63);
+            
+        
+
+        marker_5d30c8e86dd401a206679ce8b55dc245.bindPopup(popup_e678ad86219cfe1021f432f31268039c)
+        ;
+
+        
+    
+    
+            var marker_6fcfa6285aaf0ab5f068b0c41b1c99ae = L.marker(
+                [-13.779444444444445, -71.78194444444445],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ade1f656965c8d6e5952e4d7ca061e20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6fcfa6285aaf0ab5f068b0c41b1c99ae.setIcon(icon_ade1f656965c8d6e5952e4d7ca061e20);
+        
+    
+        var popup_2e8db95fb3fe7db5385b0b770cf12eaa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_96acd0a6871fd44da8d253c127202326 = $(`<div id="html_96acd0a6871fd44da8d253c127202326" style="width: 100.0%; height: 100.0%;">Rondocán (Pueblo)<br>Population: 1800</div>`)[0];
+                popup_2e8db95fb3fe7db5385b0b770cf12eaa.setContent(html_96acd0a6871fd44da8d253c127202326);
+            
+        
+
+        marker_6fcfa6285aaf0ab5f068b0c41b1c99ae.bindPopup(popup_2e8db95fb3fe7db5385b0b770cf12eaa)
+        ;
+
+        
+    
+    
+            var marker_cab3a0803fab6222add2d8a2e31729fb = L.marker(
+                [-13.947222222222223, -71.60333333333332],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_46e7524b04a5375cd167c56bd0f4b9cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cab3a0803fab6222add2d8a2e31729fb.setIcon(icon_46e7524b04a5375cd167c56bd0f4b9cd);
+        
+    
+        var popup_b9150bc7df181449278aeda50c889c52 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa847811bf6e0d6944d9dbdf9bd7e821 = $(`<div id="html_fa847811bf6e0d6944d9dbdf9bd7e821" style="width: 100.0%; height: 100.0%;">Sangarara (Pueblo)<br>Population: 3362</div>`)[0];
+                popup_b9150bc7df181449278aeda50c889c52.setContent(html_fa847811bf6e0d6944d9dbdf9bd7e821);
+            
+        
+
+        marker_cab3a0803fab6222add2d8a2e31729fb.bindPopup(popup_b9150bc7df181449278aeda50c889c52)
+        ;
+
+        
+    
+    
+            var marker_9eaef2f1ef6c7e74d0df1e0eee405aec = L.marker(
+                [-13.457777777777777, -72.14750000000001],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_48f48cda6c3159eae95f9195c57a53f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9eaef2f1ef6c7e74d0df1e0eee405aec.setIcon(icon_48f48cda6c3159eae95f9195c57a53f2);
+        
+    
+        var popup_39b6540cd148fe1aa342e5f167bc825d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1494c8cc9d54282086e6dc5b84b3f12d = $(`<div id="html_1494c8cc9d54282086e6dc5b84b3f12d" style="width: 100.0%; height: 100.0%;">Anta (Pueblo)<br>Population: 26916</div>`)[0];
+                popup_39b6540cd148fe1aa342e5f167bc825d.setContent(html_1494c8cc9d54282086e6dc5b84b3f12d);
+            
+        
+
+        marker_9eaef2f1ef6c7e74d0df1e0eee405aec.bindPopup(popup_39b6540cd148fe1aa342e5f167bc825d)
+        ;
+
+        
+    
+    
+            var marker_567ce8cfe2a04c6248777b62a1bb7058 = L.marker(
+                [-13.45722222222222, -72.30083333333333],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_9369a9365de545df47710350a13aa964 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_567ce8cfe2a04c6248777b62a1bb7058.setIcon(icon_9369a9365de545df47710350a13aa964);
+        
+    
+        var popup_5a9462dc3122925b5fdee36c3d5f5798 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1a8d3ee3fa2bf846dc9ebe65008936f = $(`<div id="html_a1a8d3ee3fa2bf846dc9ebe65008936f" style="width: 100.0%; height: 100.0%;">Ancahuasi (Pueblo)<br>Population: 7900</div>`)[0];
+                popup_5a9462dc3122925b5fdee36c3d5f5798.setContent(html_a1a8d3ee3fa2bf846dc9ebe65008936f);
+            
+        
+
+        marker_567ce8cfe2a04c6248777b62a1bb7058.bindPopup(popup_5a9462dc3122925b5fdee36c3d5f5798)
+        ;
+
+        
+    
+    
+            var marker_62bf96d1dfd344d7f70af81c03b61cf2 = L.marker(
+                [-13.477777777777778, -72.06888888888888],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e4cba32dfd803afe5449d3b6576b9731 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_62bf96d1dfd344d7f70af81c03b61cf2.setIcon(icon_e4cba32dfd803afe5449d3b6576b9731);
+        
+    
+        var popup_b65666f83e4f9f306f54ddd43219c553 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84a386b00ec6a1e1c43a2560958511c5 = $(`<div id="html_84a386b00ec6a1e1c43a2560958511c5" style="width: 100.0%; height: 100.0%;">Cachimayo (Pueblo)<br>Population: 2854</div>`)[0];
+                popup_b65666f83e4f9f306f54ddd43219c553.setContent(html_84a386b00ec6a1e1c43a2560958511c5);
+            
+        
+
+        marker_62bf96d1dfd344d7f70af81c03b61cf2.bindPopup(popup_b65666f83e4f9f306f54ddd43219c553)
+        ;
+
+        
+    
+    
+            var marker_c64d6c36f4fc4c6609fdfced0e220eb8 = L.marker(
+                [-13.629722222222222, -72.23305555555555],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_10ba92a7a11f3ba8b673670bd92bdfc0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c64d6c36f4fc4c6609fdfced0e220eb8.setIcon(icon_10ba92a7a11f3ba8b673670bd92bdfc0);
+        
+    
+        var popup_6005281ec813c3189b8babd5f2b5cc8a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44bc3fb5e8b50689ed7dd993ce58b19c = $(`<div id="html_44bc3fb5e8b50689ed7dd993ce58b19c" style="width: 100.0%; height: 100.0%;">Chinchaypujio (Pueblo)<br>Population: 4275</div>`)[0];
+                popup_6005281ec813c3189b8babd5f2b5cc8a.setContent(html_44bc3fb5e8b50689ed7dd993ce58b19c);
+            
+        
+
+        marker_c64d6c36f4fc4c6609fdfced0e220eb8.bindPopup(popup_6005281ec813c3189b8babd5f2b5cc8a)
+        ;
+
+        
+    
+    
+            var marker_f9d13bf412e07f492d8bdc337f84c1cd = L.marker(
+                [-13.415833333333333, -72.2075],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_be13008bb4391bd7dedebf9b087744ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f9d13bf412e07f492d8bdc337f84c1cd.setIcon(icon_be13008bb4391bd7dedebf9b087744ec);
+        
+    
+        var popup_5af7067cecceef9ec15e925481494495 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_980f42f6b0c091770d584977297010f8 = $(`<div id="html_980f42f6b0c091770d584977297010f8" style="width: 100.0%; height: 100.0%;">Huarocondo (Pueblo)<br>Population: 4486</div>`)[0];
+                popup_5af7067cecceef9ec15e925481494495.setContent(html_980f42f6b0c091770d584977297010f8);
+            
+        
+
+        marker_f9d13bf412e07f492d8bdc337f84c1cd.bindPopup(popup_5af7067cecceef9ec15e925481494495)
+        ;
+
+        
+    
+    
+            var marker_9d53f64a53eab58c202e3defcd04fa12 = L.marker(
+                [-13.479722222222222, -72.44277777777778],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_0e7d6bcc909e7e8d70ca02f0f92e9fc3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9d53f64a53eab58c202e3defcd04fa12.setIcon(icon_0e7d6bcc909e7e8d70ca02f0f92e9fc3);
+        
+    
+        var popup_f60a2772be45a45d0ade0c812112b371 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ecc78e145e8828d7a44f2a324fc320bd = $(`<div id="html_ecc78e145e8828d7a44f2a324fc320bd" style="width: 100.0%; height: 100.0%;">Limatambo (Pueblo)<br>Population: 7567</div>`)[0];
+                popup_f60a2772be45a45d0ade0c812112b371.setContent(html_ecc78e145e8828d7a44f2a324fc320bd);
+            
+        
+
+        marker_9d53f64a53eab58c202e3defcd04fa12.bindPopup(popup_f60a2772be45a45d0ade0c812112b371)
+        ;
+
+        
+    
+    
+            var marker_ff77a7646fef9b96324384fbc4227f0b = L.marker(
+                [-13.509166666666667, -72.52777777777777],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_743ea47f5543f24490d53ad2a84a8723 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ff77a7646fef9b96324384fbc4227f0b.setIcon(icon_743ea47f5543f24490d53ad2a84a8723);
+        
+    
+        var popup_b6790987cd8854810df91df97d04fb2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cae2cfa9e590e7f1e83bfb32d08b7052 = $(`<div id="html_cae2cfa9e590e7f1e83bfb32d08b7052" style="width: 100.0%; height: 100.0%;">Mollepata (Pueblo)<br>Population: 3580</div>`)[0];
+                popup_b6790987cd8854810df91df97d04fb2f.setContent(html_cae2cfa9e590e7f1e83bfb32d08b7052);
+            
+        
+
+        marker_ff77a7646fef9b96324384fbc4227f0b.bindPopup(popup_b6790987cd8854810df91df97d04fb2f)
+        ;
+
+        
+    
+    
+            var marker_f244b9304bba50c46b08e87637c2ea2b = L.marker(
+                [-13.47888888888889, -72.1111111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_08db6480f972228c12b05565b198d06f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f244b9304bba50c46b08e87637c2ea2b.setIcon(icon_08db6480f972228c12b05565b198d06f);
+        
+    
+        var popup_34f10be5bd6f6750df8cad6bb2400f39 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cef53b3712090f131a826570104cd093 = $(`<div id="html_cef53b3712090f131a826570104cd093" style="width: 100.0%; height: 100.0%;">Pucyura (Pueblo)<br>Population: 3113</div>`)[0];
+                popup_34f10be5bd6f6750df8cad6bb2400f39.setContent(html_cef53b3712090f131a826570104cd093);
+            
+        
+
+        marker_f244b9304bba50c46b08e87637c2ea2b.bindPopup(popup_34f10be5bd6f6750df8cad6bb2400f39)
+        ;
+
+        
+    
+    
+            var marker_472407af39539fc43af81f4a5d2dc524 = L.marker(
+                [-13.455833333333333, -72.25583333333333],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_095bcf18eaafc57a4c82fb603b019f86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_472407af39539fc43af81f4a5d2dc524.setIcon(icon_095bcf18eaafc57a4c82fb603b019f86);
+        
+    
+        var popup_fddffef4109b6cc2d8ade0ce5b9d14bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_988ca2904c9c0a7b839d03165008066d = $(`<div id="html_988ca2904c9c0a7b839d03165008066d" style="width: 100.0%; height: 100.0%;">Zurite (Pueblo)<br>Population: 3764</div>`)[0];
+                popup_fddffef4109b6cc2d8ade0ce5b9d14bc.setContent(html_988ca2904c9c0a7b839d03165008066d);
+            
+        
+
+        marker_472407af39539fc43af81f4a5d2dc524.bindPopup(popup_fddffef4109b6cc2d8ade0ce5b9d14bc)
+        ;
+
+        
+    
+    
+            var marker_dec4ca0e68c3129ad3ad8dcef80de8c4 = L.marker(
+                [-13.321111111111112, -71.95555555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_d306543bc19fece4dde1c19c0c3157eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dec4ca0e68c3129ad3ad8dcef80de8c4.setIcon(icon_d306543bc19fece4dde1c19c0c3157eb);
+        
+    
+        var popup_e568d8275241882b2db62cd5fd8a18fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_018d72e752f1193a01c453110016be6c = $(`<div id="html_018d72e752f1193a01c453110016be6c" style="width: 100.0%; height: 100.0%;">Calca (Ciudad)<br>Population: 23969</div>`)[0];
+                popup_e568d8275241882b2db62cd5fd8a18fe.setContent(html_018d72e752f1193a01c453110016be6c);
+            
+        
+
+        marker_dec4ca0e68c3129ad3ad8dcef80de8c4.bindPopup(popup_e568d8275241882b2db62cd5fd8a18fe)
+        ;
+
+        
+    
+    
+            var marker_da0ff4ebaa7c247071dee493c16f3e60 = L.marker(
+                [-13.386388888888888, -71.89833333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_77d76605780a7eb518eb3827e361c94b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_da0ff4ebaa7c247071dee493c16f3e60.setIcon(icon_77d76605780a7eb518eb3827e361c94b);
+        
+    
+        var popup_01a33a158fdc25f794a8afff3b662c02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c49f545228749c97dd1b56372eaf719 = $(`<div id="html_3c49f545228749c97dd1b56372eaf719" style="width: 100.0%; height: 100.0%;">Coya (Pueblo)<br>Population: 3620</div>`)[0];
+                popup_01a33a158fdc25f794a8afff3b662c02.setContent(html_3c49f545228749c97dd1b56372eaf719);
+            
+        
+
+        marker_da0ff4ebaa7c247071dee493c16f3e60.bindPopup(popup_01a33a158fdc25f794a8afff3b662c02)
+        ;
+
+        
+    
+    
+            var marker_42383d39005ed5095c30bbdd4b35ea6c = L.marker(
+                [-13.364444444444445, -71.92083333333333],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2cc4c7e20aefbd4a3f19f3791f24d7be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_42383d39005ed5095c30bbdd4b35ea6c.setIcon(icon_2cc4c7e20aefbd4a3f19f3791f24d7be);
+        
+    
+        var popup_b270b3cf17ce159e34876c6a6ee83086 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51b2f5665ad2d5b1ae1b0aef7fc8b7c5 = $(`<div id="html_51b2f5665ad2d5b1ae1b0aef7fc8b7c5" style="width: 100.0%; height: 100.0%;">Lamay (Pueblo)<br>Population: 6029</div>`)[0];
+                popup_b270b3cf17ce159e34876c6a6ee83086.setContent(html_51b2f5665ad2d5b1ae1b0aef7fc8b7c5);
+            
+        
+
+        marker_42383d39005ed5095c30bbdd4b35ea6c.bindPopup(popup_b270b3cf17ce159e34876c6a6ee83086)
+        ;
+
+        
+    
+    
+            var marker_8cb5ec94bdd100e3209d6c42e2234094 = L.marker(
+                [-13.104166666666666, -72.04472222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_f8eb494347376662940c51a6a20cd5d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8cb5ec94bdd100e3209d6c42e2234094.setIcon(icon_f8eb494347376662940c51a6a20cd5d3);
+        
+    
+        var popup_e7ce36f99fc4faefdb30599ba5517cea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76e39421a69d1b0435fc8ce489ff9b04 = $(`<div id="html_76e39421a69d1b0435fc8ce489ff9b04" style="width: 100.0%; height: 100.0%;">Lares (Pueblo)<br>Population: 6284</div>`)[0];
+                popup_e7ce36f99fc4faefdb30599ba5517cea.setContent(html_76e39421a69d1b0435fc8ce489ff9b04);
+            
+        
+
+        marker_8cb5ec94bdd100e3209d6c42e2234094.bindPopup(popup_e7ce36f99fc4faefdb30599ba5517cea)
+        ;
+
+        
+    
+    
+            var marker_0905f3cd6f306473ad74e05bc72a2ea2 = L.marker(
+                [-13.420555555555556, -71.85055555555554],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2984c2431d8e5720bd540c1d0ee878d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0905f3cd6f306473ad74e05bc72a2ea2.setIcon(icon_2984c2431d8e5720bd540c1d0ee878d4);
+        
+    
+        var popup_f7727cac84865d04d528f94546ee3a43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8da4cf824b3384fbf291bd565b6edc12 = $(`<div id="html_8da4cf824b3384fbf291bd565b6edc12" style="width: 100.0%; height: 100.0%;">Pisac (Pueblo)<br>Population: 11885</div>`)[0];
+                popup_f7727cac84865d04d528f94546ee3a43.setContent(html_8da4cf824b3384fbf291bd565b6edc12);
+            
+        
+
+        marker_0905f3cd6f306473ad74e05bc72a2ea2.bindPopup(popup_f7727cac84865d04d528f94546ee3a43)
+        ;
+
+        
+    
+    
+            var marker_c28dd8b442a60ab9671bbe7f21af5e60 = L.marker(
+                [-13.491944444444444, -71.7786111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e07a5d082c1267324b14edfd8a877bf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c28dd8b442a60ab9671bbe7f21af5e60.setIcon(icon_e07a5d082c1267324b14edfd8a877bf2);
+        
+    
+        var popup_d1a91e5cf6220e0acdf0fc8a513e41c0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3ad93f7de8e437881686240073b614d = $(`<div id="html_b3ad93f7de8e437881686240073b614d" style="width: 100.0%; height: 100.0%;">San Salvador (Pueblo)<br>Population: 6281</div>`)[0];
+                popup_d1a91e5cf6220e0acdf0fc8a513e41c0.setContent(html_b3ad93f7de8e437881686240073b614d);
+            
+        
+
+        marker_c28dd8b442a60ab9671bbe7f21af5e60.bindPopup(popup_d1a91e5cf6220e0acdf0fc8a513e41c0)
+        ;
+
+        
+    
+    
+            var marker_6fb033133a41c65c2752a70a1ff5a1ec = L.marker(
+                [-13.427777777777777, -71.86694444444444],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_fe5b4f478ae4e49d2a46c95590237e01 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6fb033133a41c65c2752a70a1ff5a1ec.setIcon(icon_fe5b4f478ae4e49d2a46c95590237e01);
+        
+    
+        var popup_4658c3158161eb7209a25f44e74251aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84ec25b879e5d3a8fdead51676905772 = $(`<div id="html_84ec25b879e5d3a8fdead51676905772" style="width: 100.0%; height: 100.0%;">Taray (Pueblo)<br>Population: 4947</div>`)[0];
+                popup_4658c3158161eb7209a25f44e74251aa.setContent(html_84ec25b879e5d3a8fdead51676905772);
+            
+        
+
+        marker_6fb033133a41c65c2752a70a1ff5a1ec.bindPopup(popup_4658c3158161eb7209a25f44e74251aa)
+        ;
+
+        
+    
+    
+            var marker_ed95acd41195cf0f3c0979eb2df95744 = L.marker(
+                [-12.681666666666667, -72.27722222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_db8ba3bede2153f72e988bc0d61815c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ed95acd41195cf0f3c0979eb2df95744.setIcon(icon_db8ba3bede2153f72e988bc0d61815c4);
+        
+    
+        var popup_4704af494a82977482d98fc26ea5e970 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da0b12de2650d1c0f7693a06f2b868bd = $(`<div id="html_da0b12de2650d1c0f7693a06f2b868bd" style="width: 100.0%; height: 100.0%;">Yanatile (Pueblo)<br>Population: 9228</div>`)[0];
+                popup_4704af494a82977482d98fc26ea5e970.setContent(html_da0b12de2650d1c0f7693a06f2b868bd);
+            
+        
+
+        marker_ed95acd41195cf0f3c0979eb2df95744.bindPopup(popup_4704af494a82977482d98fc26ea5e970)
+        ;
+
+        
+    
+    
+            var marker_d6b747245d3f3a4bc1b8dbe0c48371e8 = L.marker(
+                [-14.216666666666667, -71.43222222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_40473045d1bcd59cccb7c5c8c80956e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d6b747245d3f3a4bc1b8dbe0c48371e8.setIcon(icon_40473045d1bcd59cccb7c5c8c80956e9);
+        
+    
+        var popup_dac4380f4c1a386683826e95fb8d0abb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4223d3233f8d0c49edaf0a2b5fb6692c = $(`<div id="html_4223d3233f8d0c49edaf0a2b5fb6692c" style="width: 100.0%; height: 100.0%;">Yanaoca (Villa)<br>Population: 9239</div>`)[0];
+                popup_dac4380f4c1a386683826e95fb8d0abb.setContent(html_4223d3233f8d0c49edaf0a2b5fb6692c);
+            
+        
+
+        marker_d6b747245d3f3a4bc1b8dbe0c48371e8.bindPopup(popup_dac4380f4c1a386683826e95fb8d0abb)
+        ;
+
+        
+    
+    
+            var marker_23ce3dc57fcf533e735ea5c2b9f04cd4 = L.marker(
+                [-14.473333333333333, -71.39472222222223],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_390bc09087361599514b8f929e87e7e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_23ce3dc57fcf533e735ea5c2b9f04cd4.setIcon(icon_390bc09087361599514b8f929e87e7e9);
+        
+    
+        var popup_9fc2895ebe9c062a6588f7ae63b7b20c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_adf22c8e954954350627c6bf44e86f08 = $(`<div id="html_adf22c8e954954350627c6bf44e86f08" style="width: 100.0%; height: 100.0%;">Checca (Pueblo)<br>Population: 5435</div>`)[0];
+                popup_9fc2895ebe9c062a6588f7ae63b7b20c.setContent(html_adf22c8e954954350627c6bf44e86f08);
+            
+        
+
+        marker_23ce3dc57fcf533e735ea5c2b9f04cd4.bindPopup(popup_9fc2895ebe9c062a6588f7ae63b7b20c)
+        ;
+
+        
+    
+    
+            var marker_759fd2831607dff9880ea96915773fe8 = L.marker(
+                [-14.534722222222221, -71.30694444444444],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e7f25244925eb1e6ecfc483f8b370b69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_759fd2831607dff9880ea96915773fe8.setIcon(icon_e7f25244925eb1e6ecfc483f8b370b69);
+        
+    
+        var popup_6a3cada7b8b7afe7a24aca506cc4f206 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_610e183641460e412c46df6cc270ed48 = $(`<div id="html_610e183641460e412c46df6cc270ed48" style="width: 100.0%; height: 100.0%;">Kunturkanki (Pueblo)<br>Population: 5151</div>`)[0];
+                popup_6a3cada7b8b7afe7a24aca506cc4f206.setContent(html_610e183641460e412c46df6cc270ed48);
+            
+        
+
+        marker_759fd2831607dff9880ea96915773fe8.bindPopup(popup_6a3cada7b8b7afe7a24aca506cc4f206)
+        ;
+
+        
+    
+    
+            var marker_3b4ee48b06c3ef287400288d5c61a7b1 = L.marker(
+                [-14.432222222222222, -71.27277777777778],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_eecf9b4146e15d4549638a5dbe048e4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3b4ee48b06c3ef287400288d5c61a7b1.setIcon(icon_eecf9b4146e15d4549638a5dbe048e4b);
+        
+    
+        var popup_8a468c21e99303bd61eae32f3f41fe13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_628400d2e88412916cecf179526a69a5 = $(`<div id="html_628400d2e88412916cecf179526a69a5" style="width: 100.0%; height: 100.0%;">Langui (Pueblo)<br>Population: 2043</div>`)[0];
+                popup_8a468c21e99303bd61eae32f3f41fe13.setContent(html_628400d2e88412916cecf179526a69a5);
+            
+        
+
+        marker_3b4ee48b06c3ef287400288d5c61a7b1.bindPopup(popup_8a468c21e99303bd61eae32f3f41fe13)
+        ;
+
+        
+    
+    
+            var marker_1bc5239ea8457558cc24d7c7914ecc16 = L.marker(
+                [-14.494166666666667, -71.15555555555557],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ad720357c4ce27729db8d5f94a9a83de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1bc5239ea8457558cc24d7c7914ecc16.setIcon(icon_ad720357c4ce27729db8d5f94a9a83de);
+        
+    
+        var popup_bcab20b40caea08094c83bc0a3554fb5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c21d26bc3ae97884da4a3f81858fac1b = $(`<div id="html_c21d26bc3ae97884da4a3f81858fac1b" style="width: 100.0%; height: 100.0%;">Layo (Pueblo)<br>Population: 5475</div>`)[0];
+                popup_bcab20b40caea08094c83bc0a3554fb5.setContent(html_c21d26bc3ae97884da4a3f81858fac1b);
+            
+        
+
+        marker_1bc5239ea8457558cc24d7c7914ecc16.bindPopup(popup_bcab20b40caea08094c83bc0a3554fb5)
+        ;
+
+        
+    
+    
+            var marker_c3088c0a8037780fe1167104d793d0a8 = L.marker(
+                [-14.147499999999999, -71.46027777777778],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_0bd77c197d12fa165031401c4c5714cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c3088c0a8037780fe1167104d793d0a8.setIcon(icon_0bd77c197d12fa165031401c4c5714cf);
+        
+    
+        var popup_cf0693b6dd8ed22a0419d5be05c85a55 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2648a813d78a72b0b729836426834423 = $(`<div id="html_2648a813d78a72b0b729836426834423" style="width: 100.0%; height: 100.0%;">Pampamarca (Pueblo)<br>Population: 1874</div>`)[0];
+                popup_cf0693b6dd8ed22a0419d5be05c85a55.setContent(html_2648a813d78a72b0b729836426834423);
+            
+        
+
+        marker_c3088c0a8037780fe1167104d793d0a8.bindPopup(popup_cf0693b6dd8ed22a0419d5be05c85a55)
+        ;
+
+        
+    
+    
+            var marker_9bb754f22546983984b1db2dda8b399f = L.marker(
+                [-14.380277777777778, -71.45555555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ffc037d325050afe3e874981eceecb4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9bb754f22546983984b1db2dda8b399f.setIcon(icon_ffc037d325050afe3e874981eceecb4c);
+        
+    
+        var popup_c5dffcd0d558fef37e575dfd85b5c605 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_117025ce464950164e4d71498b4b4295 = $(`<div id="html_117025ce464950164e4d71498b4b4295" style="width: 100.0%; height: 100.0%;">Quehue (Pueblo)<br>Population: 2590</div>`)[0];
+                popup_c5dffcd0d558fef37e575dfd85b5c605.setContent(html_117025ce464950164e4d71498b4b4295);
+            
+        
+
+        marker_9bb754f22546983984b1db2dda8b399f.bindPopup(popup_c5dffcd0d558fef37e575dfd85b5c605)
+        ;
+
+        
+    
+    
+            var marker_f2e2ee1c62844307b710fdc339a2a9b0 = L.marker(
+                [-14.16388888888889, -71.47611111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_c9161f1e48e2479fe90306e72a7f8385 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f2e2ee1c62844307b710fdc339a2a9b0.setIcon(icon_c9161f1e48e2479fe90306e72a7f8385);
+        
+    
+        var popup_12825668159c46006b6a9f5381dc6540 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b6792466e7dbc0da4b7358e5067a255 = $(`<div id="html_3b6792466e7dbc0da4b7358e5067a255" style="width: 100.0%; height: 100.0%;">Túpac Amaru (Pueblo)<br>Population: 2582</div>`)[0];
+                popup_12825668159c46006b6a9f5381dc6540.setContent(html_3b6792466e7dbc0da4b7358e5067a255);
+            
+        
+
+        marker_f2e2ee1c62844307b710fdc339a2a9b0.bindPopup(popup_12825668159c46006b6a9f5381dc6540)
+        ;
+
+        
+    
+    
+            var marker_dc3e33c47d6340e074d85721d14fe298 = L.marker(
+                [-14.238055555555555, -71.23083333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_04b49ed890be46ff315af892890aa499 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dc3e33c47d6340e074d85721d14fe298.setIcon(icon_04b49ed890be46ff315af892890aa499);
+        
+    
+        var popup_e01adce69bc70f900477ab5ede0678c2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_621861204c9846868c6bdb10e4087824 = $(`<div id="html_621861204c9846868c6bdb10e4087824" style="width: 100.0%; height: 100.0%;">Sicuani (Ciudad)<br>Population: 65864</div>`)[0];
+                popup_e01adce69bc70f900477ab5ede0678c2.setContent(html_621861204c9846868c6bdb10e4087824);
+            
+        
+
+        marker_dc3e33c47d6340e074d85721d14fe298.bindPopup(popup_e01adce69bc70f900477ab5ede0678c2)
+        ;
+
+        
+    
+    
+            var marker_ff31aeeea671f872229c341ecce6859f = L.marker(
+                [-14.025277777777779, -71.4538888888889],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_f9388aa9c52c6c99127a7449f47770fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ff31aeeea671f872229c341ecce6859f.setIcon(icon_f9388aa9c52c6c99127a7449f47770fc);
+        
+    
+        var popup_92a6caead2c6df7264ba936bdca80803 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0bdf605bd9f61df4608246268bce80ad = $(`<div id="html_0bdf605bd9f61df4608246268bce80ad" style="width: 100.0%; height: 100.0%;">Checacupe (Pueblo)<br>Population: 5253</div>`)[0];
+                popup_92a6caead2c6df7264ba936bdca80803.setContent(html_0bdf605bd9f61df4608246268bce80ad);
+            
+        
+
+        marker_ff31aeeea671f872229c341ecce6859f.bindPopup(popup_92a6caead2c6df7264ba936bdca80803)
+        ;
+
+        
+    
+    
+            var marker_08ad80656dcf2b911ea7bd336cf5f302 = L.marker(
+                [-14.101944444444444, -71.43],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_467fd2d9cba8929c4fbce76b0963f6be = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_08ad80656dcf2b911ea7bd336cf5f302.setIcon(icon_467fd2d9cba8929c4fbce76b0963f6be);
+        
+    
+        var popup_0fb0e4efdaa282a4f0b644d61178d037 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d46c1b3753096f0935db21350be1761 = $(`<div id="html_7d46c1b3753096f0935db21350be1761" style="width: 100.0%; height: 100.0%;">Combapata (Pueblo)<br>Population: 4995</div>`)[0];
+                popup_0fb0e4efdaa282a4f0b644d61178d037.setContent(html_7d46c1b3753096f0935db21350be1761);
+            
+        
+
+        marker_08ad80656dcf2b911ea7bd336cf5f302.bindPopup(popup_0fb0e4efdaa282a4f0b644d61178d037)
+        ;
+
+        
+    
+    
+            var marker_fea2d2027c6224ef48c8cf96b041d719 = L.marker(
+                [-14.356666666666666, -71.16861111111112],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2827e6324c92d3a22a188ffead3492a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fea2d2027c6224ef48c8cf96b041d719.setIcon(icon_2827e6324c92d3a22a188ffead3492a2);
+        
+    
+        var popup_dc4f56fe36fcde9809befa34c45e3c10 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c8562ff8e72e96e45b402e004c81656 = $(`<div id="html_6c8562ff8e72e96e45b402e004c81656" style="width: 100.0%; height: 100.0%;">Marangani (Pueblo)<br>Population: 10280</div>`)[0];
+                popup_dc4f56fe36fcde9809befa34c45e3c10.setContent(html_6c8562ff8e72e96e45b402e004c81656);
+            
+        
+
+        marker_fea2d2027c6224ef48c8cf96b041d719.bindPopup(popup_dc4f56fe36fcde9809befa34c45e3c10)
+        ;
+
+        
+    
+    
+            var marker_3a8d0075fc4a7f4a09ed4f228f0fd5fa = L.marker(
+                [-13.980277777777777, -71.4175],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_80ef5626f8bb1b338eba96aa67d1facd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3a8d0075fc4a7f4a09ed4f228f0fd5fa.setIcon(icon_80ef5626f8bb1b338eba96aa67d1facd);
+        
+    
+        var popup_f790359da6952d1bae39e5218f76b8ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42ff7f8b2ac6be03252ce035c655024d = $(`<div id="html_42ff7f8b2ac6be03252ce035c655024d" style="width: 100.0%; height: 100.0%;">Pitumarca (Pueblo)<br>Population: 8538</div>`)[0];
+                popup_f790359da6952d1bae39e5218f76b8ce.setContent(html_42ff7f8b2ac6be03252ce035c655024d);
+            
+        
+
+        marker_3a8d0075fc4a7f4a09ed4f228f0fd5fa.bindPopup(popup_f790359da6952d1bae39e5218f76b8ce)
+        ;
+
+        
+    
+    
+            var marker_e131cd94fd4b7fee685e2cd198a625c7 = L.marker(
+                [-14.202222222222222, -71.315],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_5693a2f4ffc104172ab06ec96f04b017 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e131cd94fd4b7fee685e2cd198a625c7.setIcon(icon_5693a2f4ffc104172ab06ec96f04b017);
+        
+    
+        var popup_c65ccf5ad14e5b46cb42a255562cca9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b93fe78bac6192c6cae84cb59c68a00 = $(`<div id="html_7b93fe78bac6192c6cae84cb59c68a00" style="width: 100.0%; height: 100.0%;">San Pablo (Villa)<br>Population: 4395</div>`)[0];
+                popup_c65ccf5ad14e5b46cb42a255562cca9d.setContent(html_7b93fe78bac6192c6cae84cb59c68a00);
+            
+        
+
+        marker_e131cd94fd4b7fee685e2cd198a625c7.bindPopup(popup_c65ccf5ad14e5b46cb42a255562cca9d)
+        ;
+
+        
+    
+    
+            var marker_acb1896d1dc0bb42278851e53c90185a = L.marker(
+                [-14.186111111111112, -71.34305555555555],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_f273b202b371ed50d4af0802c8e772b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_acb1896d1dc0bb42278851e53c90185a.setIcon(icon_f273b202b371ed50d4af0802c8e772b3);
+        
+    
+        var popup_e75158eb9d81032f0cb9ef8452f058be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f6b74c7c47480da7b529366fb2d46c3 = $(`<div id="html_4f6b74c7c47480da7b529366fb2d46c3" style="width: 100.0%; height: 100.0%;">San Pedro (Pueblo)<br>Population: 2780</div>`)[0];
+                popup_e75158eb9d81032f0cb9ef8452f058be.setContent(html_4f6b74c7c47480da7b529366fb2d46c3);
+            
+        
+
+        marker_acb1896d1dc0bb42278851e53c90185a.bindPopup(popup_e75158eb9d81032f0cb9ef8452f058be)
+        ;
+
+        
+    
+    
+            var marker_c7fdcbc74716d09437418a114629e15c = L.marker(
+                [-14.145277777777777, -71.40722222222223],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_90addc3aab8f2de673cadd5c98acb09c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c7fdcbc74716d09437418a114629e15c.setIcon(icon_90addc3aab8f2de673cadd5c98acb09c);
+        
+    
+        var popup_577c367a787e3c2becea7dc2be656543 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9d977b0607f0814bf040495cfa5d2f6 = $(`<div id="html_e9d977b0607f0814bf040495cfa5d2f6" style="width: 100.0%; height: 100.0%;">Tinta (Villa)<br>Population: 5453</div>`)[0];
+                popup_577c367a787e3c2becea7dc2be656543.setContent(html_e9d977b0607f0814bf040495cfa5d2f6);
+            
+        
+
+        marker_c7fdcbc74716d09437418a114629e15c.bindPopup(popup_577c367a787e3c2becea7dc2be656543)
+        ;
+
+        
+    
+    
+            var marker_2a6eb4b9cb220381b1c69b1784793865 = L.marker(
+                [-14.453333333333333, -72.08222222222221],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_1642904009a5062a2a0c84811b612230 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2a6eb4b9cb220381b1c69b1784793865.setIcon(icon_1642904009a5062a2a0c84811b612230);
+        
+    
+        var popup_e3aa0de0479bb351b88be6d70a3bc3d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb8a45586dc0c3c63ccc321e3c3a59e5 = $(`<div id="html_cb8a45586dc0c3c63ccc321e3c3a59e5" style="width: 100.0%; height: 100.0%;">Santo Tomás (Villa)<br>Population: 22624</div>`)[0];
+                popup_e3aa0de0479bb351b88be6d70a3bc3d7.setContent(html_cb8a45586dc0c3c63ccc321e3c3a59e5);
+            
+        
+
+        marker_2a6eb4b9cb220381b1c69b1784793865.bindPopup(popup_e3aa0de0479bb351b88be6d70a3bc3d7)
+        ;
+
+        
+    
+    
+            var marker_a89c90460c0f145666deb5617e244e55 = L.marker(
+                [-14.007222222222222, -72.0025],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_b892de657b04c5381be5e26ee274064e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a89c90460c0f145666deb5617e244e55.setIcon(icon_b892de657b04c5381be5e26ee274064e);
+        
+    
+        var popup_a608090c6cb4064064c4ece60d215fe0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de56fe096f401f2025123eff5ff37ddc = $(`<div id="html_de56fe096f401f2025123eff5ff37ddc" style="width: 100.0%; height: 100.0%;">Capacmarca (Pueblo)<br>Population: 4064</div>`)[0];
+                popup_a608090c6cb4064064c4ece60d215fe0.setContent(html_de56fe096f401f2025123eff5ff37ddc);
+            
+        
+
+        marker_a89c90460c0f145666deb5617e244e55.bindPopup(popup_a608090c6cb4064064c4ece60d215fe0)
+        ;
+
+        
+    
+    
+            var marker_69e35d58349ca972f2208fd76c46e405 = L.marker(
+                [-14.3025, -71.85222222222221],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e0cee6e1789c48600ce252314f606a0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_69e35d58349ca972f2208fd76c46e405.setIcon(icon_e0cee6e1789c48600ce252314f606a0f);
+        
+    
+        var popup_ee2e2c706a25c3e463514ca50161bde8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23cea5f8b9516e0b87893d6aa14f0b1d = $(`<div id="html_23cea5f8b9516e0b87893d6aa14f0b1d" style="width: 100.0%; height: 100.0%;">Chamaca (Pueblo)<br>Population: 6359</div>`)[0];
+                popup_ee2e2c706a25c3e463514ca50161bde8.setContent(html_23cea5f8b9516e0b87893d6aa14f0b1d);
+            
+        
+
+        marker_69e35d58349ca972f2208fd76c46e405.bindPopup(popup_ee2e2c706a25c3e463514ca50161bde8)
+        ;
+
+        
+    
+    
+            var marker_2da802ec16b04534cfbc2cd63490703c = L.marker(
+                [-14.285277777777777, -72.03999999999999],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_75752bbe5ae8d6eb77b68f78080e32da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2da802ec16b04534cfbc2cd63490703c.setIcon(icon_75752bbe5ae8d6eb77b68f78080e32da);
+        
+    
+        var popup_2ffa62f8e4752fdf0c879226cae3f40b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e5b7d8e832ecf1317c011c15242a5613 = $(`<div id="html_e5b7d8e832ecf1317c011c15242a5613" style="width: 100.0%; height: 100.0%;">Colquemarca (Villa)<br>Population: 6923</div>`)[0];
+                popup_2ffa62f8e4752fdf0c879226cae3f40b.setContent(html_e5b7d8e832ecf1317c011c15242a5613);
+            
+        
+
+        marker_2da802ec16b04534cfbc2cd63490703c.bindPopup(popup_2ffa62f8e4752fdf0c879226cae3f40b)
+        ;
+
+        
+    
+    
+            var marker_91b48e25b3d2a3f77710d6312f3e74e0 = L.marker(
+                [-14.312777777777779, -71.68972222222223],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e01b28a8d76182b50fd5b045c302ede1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_91b48e25b3d2a3f77710d6312f3e74e0.setIcon(icon_e01b28a8d76182b50fd5b045c302ede1);
+        
+    
+        var popup_57886c2c4c5445bef98e0ed99943253c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ecc04695aed6541bced057aa9c992cd = $(`<div id="html_5ecc04695aed6541bced057aa9c992cd" style="width: 100.0%; height: 100.0%;">Livitaca (Pueblo)<br>Population: 13009</div>`)[0];
+                popup_57886c2c4c5445bef98e0ed99943253c.setContent(html_5ecc04695aed6541bced057aa9c992cd);
+            
+        
+
+        marker_91b48e25b3d2a3f77710d6312f3e74e0.bindPopup(popup_57886c2c4c5445bef98e0ed99943253c)
+        ;
+
+        
+    
+    
+            var marker_5c1b8a1be606c1af9ad01d76f940df9f = L.marker(
+                [-14.3375, -72.11361111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_8175bb4292b05c981b2a51ebb058984d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5c1b8a1be606c1af9ad01d76f940df9f.setIcon(icon_8175bb4292b05c981b2a51ebb058984d);
+        
+    
+        var popup_613cfb55842aca07d0cb47bc4c199965 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b556765b2b17c3e3ddd3d5478c89845b = $(`<div id="html_b556765b2b17c3e3ddd3d5478c89845b" style="width: 100.0%; height: 100.0%;">Llusco (Pueblo)<br>Population: 4083</div>`)[0];
+                popup_613cfb55842aca07d0cb47bc4c199965.setContent(html_b556765b2b17c3e3ddd3d5478c89845b);
+            
+        
+
+        marker_5c1b8a1be606c1af9ad01d76f940df9f.bindPopup(popup_613cfb55842aca07d0cb47bc4c199965)
+        ;
+
+        
+    
+    
+            var marker_1b18ba6d9b043bbeb1673a63848d9f51 = L.marker(
+                [-14.311111111111112, -72.13861111111112],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2a06e3b54647919b9ab9a525ba7f5fff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1b18ba6d9b043bbeb1673a63848d9f51.setIcon(icon_2a06e3b54647919b9ab9a525ba7f5fff);
+        
+    
+        var popup_3d8bac430e07719e46e65aa385ec6de3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc53965cffec995a1692c67ef9ca64e8 = $(`<div id="html_cc53965cffec995a1692c67ef9ca64e8" style="width: 100.0%; height: 100.0%;">Quiñota (Pueblo)<br>Population: 3978</div>`)[0];
+                popup_3d8bac430e07719e46e65aa385ec6de3.setContent(html_cc53965cffec995a1692c67ef9ca64e8);
+            
+        
+
+        marker_1b18ba6d9b043bbeb1673a63848d9f51.bindPopup(popup_3d8bac430e07719e46e65aa385ec6de3)
+        ;
+
+        
+    
+    
+            var marker_a4763647152f79097e85bcd4a7868323 = L.marker(
+                [-14.508611111111112, -71.88111111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_80a99010bab0f908371fdeb8969a39f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a4763647152f79097e85bcd4a7868323.setIcon(icon_80a99010bab0f908371fdeb8969a39f3);
+        
+    
+        var popup_5050fdaa7adef337dc733dbb32c9f958 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d4142d8b02bb936093fe7fd7da642a7 = $(`<div id="html_2d4142d8b02bb936093fe7fd7da642a7" style="width: 100.0%; height: 100.0%;">Velille (Villa)<br>Population: 8587</div>`)[0];
+                popup_5050fdaa7adef337dc733dbb32c9f958.setContent(html_2d4142d8b02bb936093fe7fd7da642a7);
+            
+        
+
+        marker_a4763647152f79097e85bcd4a7868323.bindPopup(popup_5050fdaa7adef337dc733dbb32c9f958)
+        ;
+
+        
+    
+    
+            var marker_cfbc009a93fd887de1352bb851c0d1db = L.marker(
+                [-14.793055555555556, -71.41333333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_eec0803a929cfb4a44f37ae554c8f664 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cfbc009a93fd887de1352bb851c0d1db.setIcon(icon_eec0803a929cfb4a44f37ae554c8f664);
+        
+    
+        var popup_0bacae17d16fae469be955a69b00ee45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1de558e96da96868391059c2707af92 = $(`<div id="html_f1de558e96da96868391059c2707af92" style="width: 100.0%; height: 100.0%;">Espinar (Villa)<br>Population: 40781</div>`)[0];
+                popup_0bacae17d16fae469be955a69b00ee45.setContent(html_f1de558e96da96868391059c2707af92);
+            
+        
+
+        marker_cfbc009a93fd887de1352bb851c0d1db.bindPopup(popup_0bacae17d16fae469be955a69b00ee45)
+        ;
+
+        
+    
+    
+            var marker_07666e6c21b4299fc3087cfec10b03f8 = L.marker(
+                [-15.300555555555556, -71.13833333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_0a3cc3b60432b2168082c0faac845d10 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_07666e6c21b4299fc3087cfec10b03f8.setIcon(icon_0a3cc3b60432b2168082c0faac845d10);
+        
+    
+        var popup_b46e1f7285e42ed642c70ebe85c4b408 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d7d2cd2d9992762302aac012495de69 = $(`<div id="html_4d7d2cd2d9992762302aac012495de69" style="width: 100.0%; height: 100.0%;">Condoroma (Pueblo)<br>Population: 824</div>`)[0];
+                popup_b46e1f7285e42ed642c70ebe85c4b408.setContent(html_4d7d2cd2d9992762302aac012495de69);
+            
+        
+
+        marker_07666e6c21b4299fc3087cfec10b03f8.bindPopup(popup_b46e1f7285e42ed642c70ebe85c4b408)
+        ;
+
+        
+    
+    
+            var marker_75196589834d229dc0e77850179dad9a = L.marker(
+                [-14.800277777777778, -71.53166666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_0822234ee840e37a99537e6a270e633b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_75196589834d229dc0e77850179dad9a.setIcon(icon_0822234ee840e37a99537e6a270e633b);
+        
+    
+        var popup_5fc31e60c791c216efb6d1a5e337000b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e65682b38a6e670a77a8e9711823d319 = $(`<div id="html_e65682b38a6e670a77a8e9711823d319" style="width: 100.0%; height: 100.0%;">Coporaque (Pueblo)<br>Population: 8688</div>`)[0];
+                popup_5fc31e60c791c216efb6d1a5e337000b.setContent(html_e65682b38a6e670a77a8e9711823d319);
+            
+        
+
+        marker_75196589834d229dc0e77850179dad9a.bindPopup(popup_5fc31e60c791c216efb6d1a5e337000b)
+        ;
+
+        
+    
+    
+            var marker_fd610e9738525c7b6b708d7231dbba91 = L.marker(
+                [-15.051944444444445, -71.12916666666666],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_246909480ce6e914cfad8caedca63398 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fd610e9738525c7b6b708d7231dbba91.setIcon(icon_246909480ce6e914cfad8caedca63398);
+        
+    
+        var popup_250fb8ff292fbb6c2e701c492f85297d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc6ab5e855a9411d038ea67caa487ae9 = $(`<div id="html_bc6ab5e855a9411d038ea67caa487ae9" style="width: 100.0%; height: 100.0%;">Ocoruro (Pueblo)<br>Population: 902</div>`)[0];
+                popup_250fb8ff292fbb6c2e701c492f85297d.setContent(html_bc6ab5e855a9411d038ea67caa487ae9);
+            
+        
+
+        marker_fd610e9738525c7b6b708d7231dbba91.bindPopup(popup_250fb8ff292fbb6c2e701c492f85297d)
+        ;
+
+        
+    
+    
+            var marker_ca5ce0d5be38a5e49ec2d509b9af0c18 = L.marker(
+                [-14.890277777777778, -71.21000000000001],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_970a55a4b60f575bb7d38193c0d4f364 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ca5ce0d5be38a5e49ec2d509b9af0c18.setIcon(icon_970a55a4b60f575bb7d38193c0d4f364);
+        
+    
+        var popup_6bce46e83db6a89005caf85850aef959 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a56557f8f49e17675f7c1c0f55ae5f9c = $(`<div id="html_a56557f8f49e17675f7c1c0f55ae5f9c" style="width: 100.0%; height: 100.0%;">Pallpata (Pueblo)<br>Population: 5059</div>`)[0];
+                popup_6bce46e83db6a89005caf85850aef959.setContent(html_a56557f8f49e17675f7c1c0f55ae5f9c);
+            
+        
+
+        marker_ca5ce0d5be38a5e49ec2d509b9af0c18.bindPopup(popup_6bce46e83db6a89005caf85850aef959)
+        ;
+
+        
+    
+    
+            var marker_00610dce3d662e65c974c0bb44087d4f = L.marker(
+                [-14.678055555555554, -71.4063888888889],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_b5828102214b7d6a2cb6fe0d6af54093 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_00610dce3d662e65c974c0bb44087d4f.setIcon(icon_b5828102214b7d6a2cb6fe0d6af54093);
+        
+    
+        var popup_74d8cacbde1b62c7592148eb509c8c1f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a3fe38ed437f625931dc6bfe3270a8a = $(`<div id="html_8a3fe38ed437f625931dc6bfe3270a8a" style="width: 100.0%; height: 100.0%;">Pichigua (Pueblo)<br>Population: 2663</div>`)[0];
+                popup_74d8cacbde1b62c7592148eb509c8c1f.setContent(html_8a3fe38ed437f625931dc6bfe3270a8a);
+            
+        
+
+        marker_00610dce3d662e65c974c0bb44087d4f.bindPopup(popup_74d8cacbde1b62c7592148eb509c8c1f)
+        ;
+
+        
+    
+    
+            var marker_1fe863979ddbcb2de1b410240069e64c = L.marker(
+                [-15.008611111111112, -71.64333333333335],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_42f2ef0530f795b62b3b800326dc8443 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1fe863979ddbcb2de1b410240069e64c.setIcon(icon_42f2ef0530f795b62b3b800326dc8443);
+        
+    
+        var popup_34dcbe6d144d346020e5fe82c5a6efe4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ddd875402fdc22f586796f3cce0bc57f = $(`<div id="html_ddd875402fdc22f586796f3cce0bc57f" style="width: 100.0%; height: 100.0%;">Suyckutambo (Pueblo)<br>Population: 1371</div>`)[0];
+                popup_34dcbe6d144d346020e5fe82c5a6efe4.setContent(html_ddd875402fdc22f586796f3cce0bc57f);
+            
+        
+
+        marker_1fe863979ddbcb2de1b410240069e64c.bindPopup(popup_34dcbe6d144d346020e5fe82c5a6efe4)
+        ;
+
+        
+    
+    
+            var marker_ca81f8b61536e5d3ffdcdd556c67fca7 = L.marker(
+                [-14.776944444444446, -71.25083333333333],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_4934feb227df0b3d3c8451ca61939d96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ca81f8b61536e5d3ffdcdd556c67fca7.setIcon(icon_4934feb227df0b3d3c8451ca61939d96);
+        
+    
+        var popup_68ee6ee41ea8dce05f8e28917890a3b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9b063fcb533854762f2f73e6f9a8c12 = $(`<div id="html_f9b063fcb533854762f2f73e6f9a8c12" style="width: 100.0%; height: 100.0%;">Alto Pichigua (Villa)<br>Population: 1894</div>`)[0];
+                popup_68ee6ee41ea8dce05f8e28917890a3b4.setContent(html_f9b063fcb533854762f2f73e6f9a8c12);
+            
+        
+
+        marker_ca81f8b61536e5d3ffdcdd556c67fca7.bindPopup(popup_68ee6ee41ea8dce05f8e28917890a3b4)
+        ;
+
+        
+    
+    
+            var marker_7b6d8a6777052586d65dd00959f46de2 = L.marker(
+                [-12.862777777777778, -72.69333333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e577666573e6c951d683255b411e838f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7b6d8a6777052586d65dd00959f46de2.setIcon(icon_e577666573e6c951d683255b411e838f);
+        
+    
+        var popup_3054484577e71b0232b543fc50db208d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fdedc1ef10f8b83058c575985232e7f1 = $(`<div id="html_fdedc1ef10f8b83058c575985232e7f1" style="width: 100.0%; height: 100.0%;">Santa Ana (Ciudad)<br>Population: 29456</div>`)[0];
+                popup_3054484577e71b0232b543fc50db208d.setContent(html_fdedc1ef10f8b83058c575985232e7f1);
+            
+        
+
+        marker_7b6d8a6777052586d65dd00959f46de2.bindPopup(popup_3054484577e71b0232b543fc50db208d)
+        ;
+
+        
+    
+    
+            var marker_97924377d5d9b2e0954983c81d764687 = L.marker(
+                [-12.768055555555556, -72.5761111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_60824c35c35aefcea798af5d95ad2975 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_97924377d5d9b2e0954983c81d764687.setIcon(icon_60824c35c35aefcea798af5d95ad2975);
+        
+    
+        var popup_d8943ba70b5fce9dc3b8d4de8503e2a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_817b1bd2690b23e2e4807352a803d920 = $(`<div id="html_817b1bd2690b23e2e4807352a803d920" style="width: 100.0%; height: 100.0%;">Echarate (Pueblo)<br>Population: 17871</div>`)[0];
+                popup_d8943ba70b5fce9dc3b8d4de8503e2a6.setContent(html_817b1bd2690b23e2e4807352a803d920);
+            
+        
+
+        marker_97924377d5d9b2e0954983c81d764687.bindPopup(popup_d8943ba70b5fce9dc3b8d4de8503e2a6)
+        ;
+
+        
+    
+    
+            var marker_8b9982d63aca80afb321b4b562707a5f = L.marker(
+                [-13.004722222222222, -72.55444444444444],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_81ee5c76a0aa19fb69786af3d77a1ef2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8b9982d63aca80afb321b4b562707a5f.setIcon(icon_81ee5c76a0aa19fb69786af3d77a1ef2);
+        
+    
+        var popup_e2dcf827d6658e6fb93995c105b3e9b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8774ea0270d882779c491b0da806297b = $(`<div id="html_8774ea0270d882779c491b0da806297b" style="width: 100.0%; height: 100.0%;">Huayopata (Pueblo)<br>Population: 5418</div>`)[0];
+                popup_e2dcf827d6658e6fb93995c105b3e9b6.setContent(html_8774ea0270d882779c491b0da806297b);
+            
+        
+
+        marker_8b9982d63aca80afb321b4b562707a5f.bindPopup(popup_e2dcf827d6658e6fb93995c105b3e9b6)
+        ;
+
+        
+    
+    
+            var marker_f7a74ab9c257dd40b66b0f40e70c335f = L.marker(
+                [-12.962777777777777, -72.66472222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_c1362f703d51b2bb481a2034a62d8fcd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f7a74ab9c257dd40b66b0f40e70c335f.setIcon(icon_c1362f703d51b2bb481a2034a62d8fcd);
+        
+    
+        var popup_b29ba7ac3675eea1e9637d298fdecb61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29115b9602f3441784ace3f0e842cf13 = $(`<div id="html_29115b9602f3441784ace3f0e842cf13" style="width: 100.0%; height: 100.0%;">Maranura (Pueblo)<br>Population: 4930</div>`)[0];
+                popup_b29ba7ac3675eea1e9637d298fdecb61.setContent(html_29115b9602f3441784ace3f0e842cf13);
+            
+        
+
+        marker_f7a74ab9c257dd40b66b0f40e70c335f.bindPopup(popup_b29ba7ac3675eea1e9637d298fdecb61)
+        ;
+
+        
+    
+    
+            var marker_f0130b88bd54add2b388dcaba4c5f982 = L.marker(
+                [-12.871666666666668, -72.44722222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_b2268a051e65d10c4354ad5100610c46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f0130b88bd54add2b388dcaba4c5f982.setIcon(icon_b2268a051e65d10c4354ad5100610c46);
+        
+    
+        var popup_32f3bf76ed5c842efe61eb8e12180e4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2df523760479f01f487999cc02b1baa1 = $(`<div id="html_2df523760479f01f487999cc02b1baa1" style="width: 100.0%; height: 100.0%;">Ocobamba (Pueblo)<br>Population: 5861</div>`)[0];
+                popup_32f3bf76ed5c842efe61eb8e12180e4c.setContent(html_2df523760479f01f487999cc02b1baa1);
+            
+        
+
+        marker_f0130b88bd54add2b388dcaba4c5f982.bindPopup(popup_32f3bf76ed5c842efe61eb8e12180e4c)
+        ;
+
+        
+    
+    
+            var marker_b68f606ec3f985d341fde02b8f1d8d49 = L.marker(
+                [-12.636666666666667, -72.55722222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_293ce295df7fdd89e9dc085fda0a5c12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b68f606ec3f985d341fde02b8f1d8d49.setIcon(icon_293ce295df7fdd89e9dc085fda0a5c12);
+        
+    
+        var popup_d01ff92d97148e3a18b72db7169510ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f1d45e78a65e0e535d9461ec2e9e623 = $(`<div id="html_2f1d45e78a65e0e535d9461ec2e9e623" style="width: 100.0%; height: 100.0%;">Quellouno (Pueblo)<br>Population: 15091</div>`)[0];
+                popup_d01ff92d97148e3a18b72db7169510ae.setContent(html_2f1d45e78a65e0e535d9461ec2e9e623);
+            
+        
+
+        marker_b68f606ec3f985d341fde02b8f1d8d49.bindPopup(popup_d01ff92d97148e3a18b72db7169510ae)
+        ;
+
+        
+    
+    
+            var marker_d227f6037a078cad8aa5c906e9f51968 = L.marker(
+                [-12.620000000000001, -73.78916666666666],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2d20ed1f94556b6d9c94f8812b99b071 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d227f6037a078cad8aa5c906e9f51968.setIcon(icon_2d20ed1f94556b6d9c94f8812b99b071);
+        
+    
+        var popup_2a3b9dce2c942d76fe593053289b6a9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21891cbf35c9c671dc9d547776772555 = $(`<div id="html_21891cbf35c9c671dc9d547776772555" style="width: 100.0%; height: 100.0%;">Kimbiri (Pueblo)<br>Population: 14056</div>`)[0];
+                popup_2a3b9dce2c942d76fe593053289b6a9d.setContent(html_21891cbf35c9c671dc9d547776772555);
+            
+        
+
+        marker_d227f6037a078cad8aa5c906e9f51968.bindPopup(popup_2a3b9dce2c942d76fe593053289b6a9d)
+        ;
+
+        
+    
+    
+            var marker_d593c10c86f0dd35d69655c4b0dde54e = L.marker(
+                [-13.130555555555556, -72.59388888888888],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_0d07b113186fd1e3fcb130328e231f73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d593c10c86f0dd35d69655c4b0dde54e.setIcon(icon_0d07b113186fd1e3fcb130328e231f73);
+        
+    
+        var popup_8401eccf0a81dca32769a5e4c122fba9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cabeadda3f146c9d0c9c8f839076dc81 = $(`<div id="html_cabeadda3f146c9d0c9c8f839076dc81" style="width: 100.0%; height: 100.0%;">Santa Teresa (Pueblo)<br>Population: 6912</div>`)[0];
+                popup_8401eccf0a81dca32769a5e4c122fba9.setContent(html_cabeadda3f146c9d0c9c8f839076dc81);
+            
+        
+
+        marker_d593c10c86f0dd35d69655c4b0dde54e.bindPopup(popup_8401eccf0a81dca32769a5e4c122fba9)
+        ;
+
+        
+    
+    
+            var marker_473631066c6018ea6f12cb88a628a92b = L.marker(
+                [-13.063055555555556, -72.93444444444445],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2658297d94e92f3898df4557970d6b8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_473631066c6018ea6f12cb88a628a92b.setIcon(icon_2658297d94e92f3898df4557970d6b8c);
+        
+    
+        var popup_422ce71c4d2cffe6e0b8d38c649e7d35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_800b945f28e0e708452b215ce6a2bae7 = $(`<div id="html_800b945f28e0e708452b215ce6a2bae7" style="width: 100.0%; height: 100.0%;">Vilcabamba (Pueblo)<br>Population: 9976</div>`)[0];
+                popup_422ce71c4d2cffe6e0b8d38c649e7d35.setContent(html_800b945f28e0e708452b215ce6a2bae7);
+            
+        
+
+        marker_473631066c6018ea6f12cb88a628a92b.bindPopup(popup_422ce71c4d2cffe6e0b8d38c649e7d35)
+        ;
+
+        
+    
+    
+            var marker_bd5f120792d4804a4ca783a81cc9f264 = L.marker(
+                [-12.519444444444446, -73.82916666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_00945b21caff496cce8828a8e9440118 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bd5f120792d4804a4ca783a81cc9f264.setIcon(icon_00945b21caff496cce8828a8e9440118);
+        
+    
+        var popup_01eaae3618c551440a95b2d237e37fa9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2e68309953bda54d14c58462a751648 = $(`<div id="html_b2e68309953bda54d14c58462a751648" style="width: 100.0%; height: 100.0%;">Pichari (Pueblo)<br>Population: 24006</div>`)[0];
+                popup_01eaae3618c551440a95b2d237e37fa9.setContent(html_b2e68309953bda54d14c58462a751648);
+            
+        
+
+        marker_bd5f120792d4804a4ca783a81cc9f264.bindPopup(popup_01eaae3618c551440a95b2d237e37fa9)
+        ;
+
+        
+    
+    
+            var marker_d483e30d6f8d438c2b25010d585fe355 = L.marker(
+                [-13.29, -73.26555555555555],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_3def69c8c4af32f9de19941cbb6a3bf9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d483e30d6f8d438c2b25010d585fe355.setIcon(icon_3def69c8c4af32f9de19941cbb6a3bf9);
+        
+    
+        var popup_2cfcb986739bba09e7985bdbe462bf33 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1cabf136abab797da84efad976bb45a7 = $(`<div id="html_1cabf136abab797da84efad976bb45a7" style="width: 100.0%; height: 100.0%;">Inkawasi (Pueblo)<br>Population: 5166</div>`)[0];
+                popup_2cfcb986739bba09e7985bdbe462bf33.setContent(html_1cabf136abab797da84efad976bb45a7);
+            
+        
+
+        marker_d483e30d6f8d438c2b25010d585fe355.bindPopup(popup_2cfcb986739bba09e7985bdbe462bf33)
+        ;
+
+        
+    
+    
+            var marker_7ae604f4a68c2dd065e77ee579528c33 = L.marker(
+                [-13.002777777777778, -73.51277777777777],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_fbd9cdcf76b5b9dfe7dc27e155be6acf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7ae604f4a68c2dd065e77ee579528c33.setIcon(icon_fbd9cdcf76b5b9dfe7dc27e155be6acf);
+        
+    
+        var popup_a4f015a085be7080b9089a69eaec1433 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8125b6b0baab27762fc2818e68d72afd = $(`<div id="html_8125b6b0baab27762fc2818e68d72afd" style="width: 100.0%; height: 100.0%;">Villa Virgen (Pueblo)<br>Population: 2458</div>`)[0];
+                popup_a4f015a085be7080b9089a69eaec1433.setContent(html_8125b6b0baab27762fc2818e68d72afd);
+            
+        
+
+        marker_7ae604f4a68c2dd065e77ee579528c33.bindPopup(popup_a4f015a085be7080b9089a69eaec1433)
+        ;
+
+        
+    
+    
+            var marker_be6935f03f120932825a78829d700ce8 = L.marker(
+                [-12.918888888888889, -73.52833333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_41a3b5d2ce9dde807adea75083c70c48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_be6935f03f120932825a78829d700ce8.setIcon(icon_41a3b5d2ce9dde807adea75083c70c48);
+        
+    
+        var popup_1e283e863f7bf0de51bb8f20364d5307 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53835d1c7a8f22796f04793946581809 = $(`<div id="html_53835d1c7a8f22796f04793946581809" style="width: 100.0%; height: 100.0%;">Villa Kintiarina (Pueblo)<br>Population: 2420</div>`)[0];
+                popup_1e283e863f7bf0de51bb8f20364d5307.setContent(html_53835d1c7a8f22796f04793946581809);
+            
+        
+
+        marker_be6935f03f120932825a78829d700ce8.bindPopup(popup_1e283e863f7bf0de51bb8f20364d5307)
+        ;
+
+        
+    
+    
+            var marker_d0d04bb77a7ec63f56c13cdd8921bb8c = L.marker(
+                [-11.720277777777778, -72.94638888888889],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ca41fead1f20fce89e1ea37a503fa478 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d0d04bb77a7ec63f56c13cdd8921bb8c.setIcon(icon_ca41fead1f20fce89e1ea37a503fa478);
+        
+    
+        var popup_4c868c1fa0fa164dca6657aa42e400b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec2a85267aeea49c400bdee74cd1cf45 = $(`<div id="html_ec2a85267aeea49c400bdee74cd1cf45" style="width: 100.0%; height: 100.0%;">Megantoni (Pueblo)<br>Population: 7394</div>`)[0];
+                popup_4c868c1fa0fa164dca6657aa42e400b2.setContent(html_ec2a85267aeea49c400bdee74cd1cf45);
+            
+        
+
+        marker_d0d04bb77a7ec63f56c13cdd8921bb8c.bindPopup(popup_4c868c1fa0fa164dca6657aa42e400b2)
+        ;
+
+        
+    
+    
+            var marker_88f1da596a15efe2091148904d0f1fcc = L.marker(
+                [-12.636666666666667, -73.20416666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2c437e631137f693b51277ca0ee5c3fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_88f1da596a15efe2091148904d0f1fcc.setIcon(icon_2c437e631137f693b51277ca0ee5c3fc);
+        
+    
+        var popup_4afb718c2f849804b023447d42381c01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_144aea727eb65421438cfdc937845eaa = $(`<div id="html_144aea727eb65421438cfdc937845eaa" style="width: 100.0%; height: 100.0%;">Kumpirushiato 1/ (Pueblo)<br>Population: 5801</div>`)[0];
+                popup_4afb718c2f849804b023447d42381c01.setContent(html_144aea727eb65421438cfdc937845eaa);
+            
+        
+
+        marker_88f1da596a15efe2091148904d0f1fcc.bindPopup(popup_4afb718c2f849804b023447d42381c01)
+        ;
+
+        
+    
+    
+            var marker_c586ae8cdbeaac8b5166733e4a2ab39b = L.marker(
+                [-12.808055555555557, -73.60444444444444],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ad3dfe0acc39c40da8636cd4aa3697ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c586ae8cdbeaac8b5166733e4a2ab39b.setIcon(icon_ad3dfe0acc39c40da8636cd4aa3697ea);
+        
+    
+        var popup_b16cbd35a874dffff1355016b4500992 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ac3ba071e333e70b0168082315da304 = $(`<div id="html_0ac3ba071e333e70b0168082315da304" style="width: 100.0%; height: 100.0%;">Cielo Punco 1/ (Pueblo)<br>Population: 2263</div>`)[0];
+                popup_b16cbd35a874dffff1355016b4500992.setContent(html_0ac3ba071e333e70b0168082315da304);
+            
+        
+
+        marker_c586ae8cdbeaac8b5166733e4a2ab39b.bindPopup(popup_b16cbd35a874dffff1355016b4500992)
+        ;
+
+        
+    
+    
+            var marker_71dd7699cce9d72d5207bc2496200c79 = L.marker(
+                [-12.7925, -73.62249999999999],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_bf7fda6658a056fc9b404dd3025d1340 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_71dd7699cce9d72d5207bc2496200c79.setIcon(icon_bf7fda6658a056fc9b404dd3025d1340);
+        
+    
+        var popup_a95f545b7756aa3f5cb43da957217f22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6c9e985dae872e21d355bd0af258751 = $(`<div id="html_c6c9e985dae872e21d355bd0af258751" style="width: 100.0%; height: 100.0%;">Manitea 1/ 4/ (Pueblo)<br>Population: 3626</div>`)[0];
+                popup_a95f545b7756aa3f5cb43da957217f22.setContent(html_c6c9e985dae872e21d355bd0af258751);
+            
+        
+
+        marker_71dd7699cce9d72d5207bc2496200c79.bindPopup(popup_a95f545b7756aa3f5cb43da957217f22)
+        ;
+
+        
+    
+    
+            var marker_9a86097cc1122ea8f3cf8e302bdd323b = L.marker(
+                [-12.324166666666667, -73.94],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_acc83d2c8d2f1c69116b399634e10c99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9a86097cc1122ea8f3cf8e302bdd323b.setIcon(icon_acc83d2c8d2f1c69116b399634e10c99);
+        
+    
+        var popup_13121c6d2b37a0c1afe756c8605999d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2aaefd66128c242d9e9e3f03fe8be000 = $(`<div id="html_2aaefd66128c242d9e9e3f03fe8be000" style="width: 100.0%; height: 100.0%;">Unión Ashaninka 1/ (Pueblo)<br>Population: 5899</div>`)[0];
+                popup_13121c6d2b37a0c1afe756c8605999d9.setContent(html_2aaefd66128c242d9e9e3f03fe8be000);
+            
+        
+
+        marker_9a86097cc1122ea8f3cf8e302bdd323b.bindPopup(popup_13121c6d2b37a0c1afe756c8605999d9)
+        ;
+
+        
+    
+    
+            var marker_d79d53ca4d1e98a1e91e4939839c4602 = L.marker(
+                [-13.761666666666667, -71.84777777777778],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_aab1e6c5e96c8ffc14c31cf2b0e4bb65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d79d53ca4d1e98a1e91e4939839c4602.setIcon(icon_aab1e6c5e96c8ffc14c31cf2b0e4bb65);
+        
+    
+        var popup_cf1010dbf2b826157c2188e7ae36b274 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69a7561aecba4780a63e8d28f288001b = $(`<div id="html_69a7561aecba4780a63e8d28f288001b" style="width: 100.0%; height: 100.0%;">Paruro (Villa)<br>Population: 3477</div>`)[0];
+                popup_cf1010dbf2b826157c2188e7ae36b274.setContent(html_69a7561aecba4780a63e8d28f288001b);
+            
+        
+
+        marker_d79d53ca4d1e98a1e91e4939839c4602.bindPopup(popup_cf1010dbf2b826157c2188e7ae36b274)
+        ;
+
+        
+    
+    
+            var marker_bd7140b69574eab96bfd4505bdf0f0f2 = L.marker(
+                [-13.971111111111112, -71.83138888888888],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_3e71a485c4ed3947e5c7514529ef8866 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bd7140b69574eab96bfd4505bdf0f0f2.setIcon(icon_3e71a485c4ed3947e5c7514529ef8866);
+        
+    
+        var popup_fcfd1172c6f484a8453d6334801d7361 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_684225d44d552167352540ec959897a3 = $(`<div id="html_684225d44d552167352540ec959897a3" style="width: 100.0%; height: 100.0%;">Accha (Villa)<br>Population: 3041</div>`)[0];
+                popup_fcfd1172c6f484a8453d6334801d7361.setContent(html_684225d44d552167352540ec959897a3);
+            
+        
+
+        marker_bd7140b69574eab96bfd4505bdf0f0f2.bindPopup(popup_fcfd1172c6f484a8453d6334801d7361)
+        ;
+
+        
+    
+    
+            var marker_f2010c49a55bc345c27b3673bfae1563 = L.marker(
+                [-13.853055555555555, -72.0825],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_031bff477f36da5cceb02f599921991f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f2010c49a55bc345c27b3673bfae1563.setIcon(icon_031bff477f36da5cceb02f599921991f);
+        
+    
+        var popup_782589c49d8850562be2caa79ad8c77d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc1b71608610b718f484c8878dcd0a8c = $(`<div id="html_cc1b71608610b718f484c8878dcd0a8c" style="width: 100.0%; height: 100.0%;">Ccapi (Villa)<br>Population: 3036</div>`)[0];
+                popup_782589c49d8850562be2caa79ad8c77d.setContent(html_cc1b71608610b718f484c8878dcd0a8c);
+            
+        
+
+        marker_f2010c49a55bc345c27b3673bfae1563.bindPopup(popup_782589c49d8850562be2caa79ad8c77d)
+        ;
+
+        
+    
+    
+            var marker_13d9fd1b53c2ca299670d9b4f4e70244 = L.marker(
+                [-13.851944444444444, -71.80333333333333],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_ed9407f8dc407d51b262eb43bb50fdd6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_13d9fd1b53c2ca299670d9b4f4e70244.setIcon(icon_ed9407f8dc407d51b262eb43bb50fdd6);
+        
+    
+        var popup_aa01395d22e9e961e24840c7d24df8ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ca49ff823b06be47b440e07e191c557 = $(`<div id="html_8ca49ff823b06be47b440e07e191c557" style="width: 100.0%; height: 100.0%;">Colcha (Pueblo)<br>Population: 905</div>`)[0];
+                popup_aa01395d22e9e961e24840c7d24df8ef.setContent(html_8ca49ff823b06be47b440e07e191c557);
+            
+        
+
+        marker_13d9fd1b53c2ca299670d9b4f4e70244.bindPopup(popup_aa01395d22e9e961e24840c7d24df8ef)
+        ;
+
+        
+    
+    
+            var marker_9923d2448aeac718f9afe9e5cbef43c5 = L.marker(
+                [-13.681944444444444, -72.01805555555555],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_8ce0191d15ac51cf1cd41f26febe61c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9923d2448aeac718f9afe9e5cbef43c5.setIcon(icon_8ce0191d15ac51cf1cd41f26febe61c8);
+        
+    
+        var popup_34b73899afd0c3b2bd9928d9a1aaca7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_972159e7055ba699c0366c4055227144 = $(`<div id="html_972159e7055ba699c0366c4055227144" style="width: 100.0%; height: 100.0%;">Huanoquite (Pueblo)<br>Population: 5025</div>`)[0];
+                popup_34b73899afd0c3b2bd9928d9a1aaca7b.setContent(html_972159e7055ba699c0366c4055227144);
+            
+        
+
+        marker_9923d2448aeac718f9afe9e5cbef43c5.bindPopup(popup_34b73899afd0c3b2bd9928d9a1aaca7b)
+        ;
+
+        
+    
+    
+            var marker_e0d5e575296aeaddbe7d294d89a8c08b = L.marker(
+                [-14.069444444444445, -71.73805555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_c39eb981ec4459ff10593981f11be07f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e0d5e575296aeaddbe7d294d89a8c08b.setIcon(icon_c39eb981ec4459ff10593981f11be07f);
+        
+    
+        var popup_6a42554eddc399d724ff2983ec92b99b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a558de08cd6a12fd15e14ba2f3546a87 = $(`<div id="html_a558de08cd6a12fd15e14ba2f3546a87" style="width: 100.0%; height: 100.0%;">Omacha (Pueblo)<br>Population: 5771</div>`)[0];
+                popup_6a42554eddc399d724ff2983ec92b99b.setContent(html_a558de08cd6a12fd15e14ba2f3546a87);
+            
+        
+
+        marker_e0d5e575296aeaddbe7d294d89a8c08b.bindPopup(popup_6a42554eddc399d724ff2983ec92b99b)
+        ;
+
+        
+    
+    
+            var marker_bc77d24e64a06b63c660335be520d13c = L.marker(
+                [-13.756388888888889, -71.95666666666666],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_e6f912e3f07047295aa4b49b31f6712c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_bc77d24e64a06b63c660335be520d13c.setIcon(icon_e6f912e3f07047295aa4b49b31f6712c);
+        
+    
+        var popup_2eaf2aec84f3053044170ce609bff3ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_026873db4ad8f2485740c205d0aa822f = $(`<div id="html_026873db4ad8f2485740c205d0aa822f" style="width: 100.0%; height: 100.0%;">Paccaritambo (Pueblo)<br>Population: 2052</div>`)[0];
+                popup_2eaf2aec84f3053044170ce609bff3ff.setContent(html_026873db4ad8f2485740c205d0aa822f);
+            
+        
+
+        marker_bc77d24e64a06b63c660335be520d13c.bindPopup(popup_2eaf2aec84f3053044170ce609bff3ff)
+        ;
+
+        
+    
+    
+            var marker_4853dd1a91bbcc42c3513e91e91f9bba = L.marker(
+                [-13.95361111111111, -71.76055555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_1c30af8d88574cda4a1b0a74e10c2e9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4853dd1a91bbcc42c3513e91e91f9bba.setIcon(icon_1c30af8d88574cda4a1b0a74e10c2e9f);
+        
+    
+        var popup_304308f9d00b32f4eb2a02ca3563ea35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_882f907da9e9309f20a14c652f6df772 = $(`<div id="html_882f907da9e9309f20a14c652f6df772" style="width: 100.0%; height: 100.0%;">Pillpinto (Pueblo)<br>Population: 1000</div>`)[0];
+                popup_304308f9d00b32f4eb2a02ca3563ea35.setContent(html_882f907da9e9309f20a14c652f6df772);
+            
+        
+
+        marker_4853dd1a91bbcc42c3513e91e91f9bba.bindPopup(popup_304308f9d00b32f4eb2a02ca3563ea35)
+        ;
+
+        
+    
+    
+            var marker_de681c20ffe224bab460d159fef3fcd6 = L.marker(
+                [-13.665277777777778, -71.92055555555557],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_437239c836709de67409a3a3915b1751 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_de681c20ffe224bab460d159fef3fcd6.setIcon(icon_437239c836709de67409a3a3915b1751);
+        
+    
+        var popup_73d68112f0c45d36718b23ca392c3134 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_395d66c790c8a0b69923b90b9e82d607 = $(`<div id="html_395d66c790c8a0b69923b90b9e82d607" style="width: 100.0%; height: 100.0%;">Yaurisque (Villa)<br>Population: 1854</div>`)[0];
+                popup_73d68112f0c45d36718b23ca392c3134.setContent(html_395d66c790c8a0b69923b90b9e82d607);
+            
+        
+
+        marker_de681c20ffe224bab460d159fef3fcd6.bindPopup(popup_73d68112f0c45d36718b23ca392c3134)
+        ;
+
+        
+    
+    
+            var marker_b25f4d1d9ade9c1800bbc5ebe1726a18 = L.marker(
+                [-13.317777777777778, -71.59666666666666],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_1ea66646383551596b0c5829f7e08dbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b25f4d1d9ade9c1800bbc5ebe1726a18.setIcon(icon_1ea66646383551596b0c5829f7e08dbb);
+        
+    
+        var popup_f705aefa1f31138b4b9cb38fd83baf57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9b6d8fe152e0f8db94652dd47410e3c7 = $(`<div id="html_9b6d8fe152e0f8db94652dd47410e3c7" style="width: 100.0%; height: 100.0%;">Paucartambo (Pueblo)<br>Population: 13709</div>`)[0];
+                popup_f705aefa1f31138b4b9cb38fd83baf57.setContent(html_9b6d8fe152e0f8db94652dd47410e3c7);
+            
+        
+
+        marker_b25f4d1d9ade9c1800bbc5ebe1726a18.bindPopup(popup_f705aefa1f31138b4b9cb38fd83baf57)
+        ;
+
+        
+    
+    
+            var marker_1ac9c79853208315dc2d4104a8d1db88 = L.marker(
+                [-13.597222222222223, -71.69666666666667],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2d6e5a8487c9e11b0768d94efa79b97e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1ac9c79853208315dc2d4104a8d1db88.setIcon(icon_2d6e5a8487c9e11b0768d94efa79b97e);
+        
+    
+        var popup_a399a5ce2580fdecda053599516c5122 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3d052f1ff155bf3734bc59815cae0cf = $(`<div id="html_a3d052f1ff155bf3734bc59815cae0cf" style="width: 100.0%; height: 100.0%;">Caicay (Pueblo)<br>Population: 3151</div>`)[0];
+                popup_a399a5ce2580fdecda053599516c5122.setContent(html_a3d052f1ff155bf3734bc59815cae0cf);
+            
+        
+
+        marker_1ac9c79853208315dc2d4104a8d1db88.bindPopup(popup_a399a5ce2580fdecda053599516c5122)
+        ;
+
+        
+    
+    
+            var marker_c5409e833fd96fd768a85dad9d86230b = L.marker(
+                [-13.215, -71.64861111111112],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_722a3d95b1cb0b8f455eb8432299c165 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_c5409e833fd96fd768a85dad9d86230b.setIcon(icon_722a3d95b1cb0b8f455eb8432299c165);
+        
+    
+        var popup_c7559ef2f17780d167220c6a03b2cb4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b39674d24e87c8460d7db0a8f98e569e = $(`<div id="html_b39674d24e87c8460d7db0a8f98e569e" style="width: 100.0%; height: 100.0%;">Challabamba (Pueblo)<br>Population: 9364</div>`)[0];
+                popup_c7559ef2f17780d167220c6a03b2cb4d.setContent(html_b39674d24e87c8460d7db0a8f98e569e);
+            
+        
+
+        marker_c5409e833fd96fd768a85dad9d86230b.bindPopup(popup_c7559ef2f17780d167220c6a03b2cb4d)
+        ;
+
+        
+    
+    
+            var marker_5e7613202f470d121b1a9c4983c7883d = L.marker(
+                [-13.360277777777778, -71.67361111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_2bb913a7825e12d7346eb3bfc4794fe4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5e7613202f470d121b1a9c4983c7883d.setIcon(icon_2bb913a7825e12d7346eb3bfc4794fe4);
+        
+    
+        var popup_3ac71cfd5a7c8a72b5d65fd21fd92ed8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48cb40737379222f088c2d2797e230eb = $(`<div id="html_48cb40737379222f088c2d2797e230eb" style="width: 100.0%; height: 100.0%;">Colquepata (Pueblo)<br>Population: 8836</div>`)[0];
+                popup_3ac71cfd5a7c8a72b5d65fd21fd92ed8.setContent(html_48cb40737379222f088c2d2797e230eb);
+            
+        
+
+        marker_5e7613202f470d121b1a9c4983c7883d.bindPopup(popup_3ac71cfd5a7c8a72b5d65fd21fd92ed8)
+        ;
+
+        
+    
+    
+            var marker_b804b2ad08e502f2836594dd33c9954f = L.marker(
+                [-13.503333333333334, -71.65444444444445],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_1ee39a54f0690a11c1cbeae5693c8365 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b804b2ad08e502f2836594dd33c9954f.setIcon(icon_1ee39a54f0690a11c1cbeae5693c8365);
+        
+    
+        var popup_15be7cbb08c579734c16eff381b64c19 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c52268a420252e19ce3ca81af8304baa = $(`<div id="html_c52268a420252e19ce3ca81af8304baa" style="width: 100.0%; height: 100.0%;">Huancarani (Pueblo)<br>Population: 8001</div>`)[0];
+                popup_15be7cbb08c579734c16eff381b64c19.setContent(html_c52268a420252e19ce3ca81af8304baa);
+            
+        
+
+        marker_b804b2ad08e502f2836594dd33c9954f.bindPopup(popup_15be7cbb08c579734c16eff381b64c19)
+        ;
+
+        
+    
+    
+            var marker_7efaa679bdce16cc56c2153885848bd6 = L.marker(
+                [-12.909444444444444, -71.40333333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_a551b82b8d77399f5c24493da661462b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7efaa679bdce16cc56c2153885848bd6.setIcon(icon_a551b82b8d77399f5c24493da661462b);
+        
+    
+        var popup_d9cc1e5b51b29d9140d8acbf0c94549d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e83118e6682c9dccd4e930d5051c04c6 = $(`<div id="html_e83118e6682c9dccd4e930d5051c04c6" style="width: 100.0%; height: 100.0%;">Kosñipata (Pueblo)<br>Population: 4924</div>`)[0];
+                popup_d9cc1e5b51b29d9140d8acbf0c94549d.setContent(html_e83118e6682c9dccd4e930d5051c04c6);
+            
+        
+
+        marker_7efaa679bdce16cc56c2153885848bd6.bindPopup(popup_d9cc1e5b51b29d9140d8acbf0c94549d)
+        ;
+
+        
+    
+    
+            var marker_b34d4b66c64db13c27ccf9b6d0bf3ea1 = L.marker(
+                [-13.687777777777779, -71.62527777777777],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_b4538bef9fd054f3a7e2c747af6d173d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b34d4b66c64db13c27ccf9b6d0bf3ea1.setIcon(icon_b4538bef9fd054f3a7e2c747af6d173d);
+        
+    
+        var popup_1d54b6db238ebebb835ed58fbe29a977 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a96b106a81133f9cbcf7706bae024232 = $(`<div id="html_a96b106a81133f9cbcf7706bae024232" style="width: 100.0%; height: 100.0%;">Urcos (Pueblo)<br>Population: 12538</div>`)[0];
+                popup_1d54b6db238ebebb835ed58fbe29a977.setContent(html_a96b106a81133f9cbcf7706bae024232);
+            
+        
+
+        marker_b34d4b66c64db13c27ccf9b6d0bf3ea1.bindPopup(popup_1d54b6db238ebebb835ed58fbe29a977)
+        ;
+
+        
+    
+    
+            var marker_9e5a5c676d5e51e5f51ab46085bb9143 = L.marker(
+                [-13.673333333333332, -71.67777777777778],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_96684bd5c8a2537aa70b01cd8512f4df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9e5a5c676d5e51e5f51ab46085bb9143.setIcon(icon_96684bd5c8a2537aa70b01cd8512f4df);
+        
+    
+        var popup_50880137fd6df3a41a211e0858477c23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_369ed6229de8d2e2738da9ef410b51ef = $(`<div id="html_369ed6229de8d2e2738da9ef410b51ef" style="width: 100.0%; height: 100.0%;">Andahuaylillas (Pueblo)<br>Population: 7382</div>`)[0];
+                popup_50880137fd6df3a41a211e0858477c23.setContent(html_369ed6229de8d2e2738da9ef410b51ef);
+            
+        
+
+        marker_9e5a5c676d5e51e5f51ab46085bb9143.bindPopup(popup_50880137fd6df3a41a211e0858477c23)
+        ;
+
+        
+    
+    
+            var marker_9e4e67379be27bb355664dc0e030eafb = L.marker(
+                [-13.231388888888889, -70.75444444444445],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_3dc8828c12201163182aa317fbe3f741 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_9e4e67379be27bb355664dc0e030eafb.setIcon(icon_3dc8828c12201163182aa317fbe3f741);
+        
+    
+        var popup_83175374724eb70decbafdaee350ea98 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ae4920b61b3f8783eb5cacea5ceea2ab = $(`<div id="html_ae4920b61b3f8783eb5cacea5ceea2ab" style="width: 100.0%; height: 100.0%;">Camanti (Pueblo)<br>Population: 2692</div>`)[0];
+                popup_83175374724eb70decbafdaee350ea98.setContent(html_ae4920b61b3f8783eb5cacea5ceea2ab);
+            
+        
+
+        marker_9e4e67379be27bb355664dc0e030eafb.bindPopup(popup_83175374724eb70decbafdaee350ea98)
+        ;
+
+        
+    
+    
+            var marker_6eba2b44ee9428343e0748ed0a5a3c6f = L.marker(
+                [-13.595277777777778, -71.39972222222222],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_1f84ca1667d30c84bc5b9b34a65a98f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6eba2b44ee9428343e0748ed0a5a3c6f.setIcon(icon_1f84ca1667d30c84bc5b9b34a65a98f4);
+        
+    
+        var popup_e6333eb26b6fde3eb1490eddbee83511 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_926fddbba51354d033f5c49c3b88330c = $(`<div id="html_926fddbba51354d033f5c49c3b88330c" style="width: 100.0%; height: 100.0%;">Ccarhuayo (Pueblo)<br>Population: 3197</div>`)[0];
+                popup_e6333eb26b6fde3eb1490eddbee83511.setContent(html_926fddbba51354d033f5c49c3b88330c);
+            
+        
+
+        marker_6eba2b44ee9428343e0748ed0a5a3c6f.bindPopup(popup_e6333eb26b6fde3eb1490eddbee83511)
+        ;
+
+        
+    
+    
+            var marker_3bd4a58c01b329c84e42d8cf4c7acaf9 = L.marker(
+                [-13.605277777777777, -71.56361111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_6750c48253e261f647a3be4113d41c75 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3bd4a58c01b329c84e42d8cf4c7acaf9.setIcon(icon_6750c48253e261f647a3be4113d41c75);
+        
+    
+        var popup_2a8a7d8dbd3fbbd0306035fd5369affd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ec337faf9592e1b13e86e2537700e74 = $(`<div id="html_9ec337faf9592e1b13e86e2537700e74" style="width: 100.0%; height: 100.0%;">Ccatca (Pueblo)<br>Population: 15186</div>`)[0];
+                popup_2a8a7d8dbd3fbbd0306035fd5369affd.setContent(html_9ec337faf9592e1b13e86e2537700e74);
+            
+        
+
+        marker_3bd4a58c01b329c84e42d8cf4c7acaf9.bindPopup(popup_2a8a7d8dbd3fbbd0306035fd5369affd)
+        ;
+
+        
+    
+    
+            var marker_538d6e8bf87c8535b10b93e859e2b28c = L.marker(
+                [-13.906944444444445, -71.5025],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_b62b983a1dcc684b846eeae1d9b06a54 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_538d6e8bf87c8535b10b93e859e2b28c.setIcon(icon_b62b983a1dcc684b846eeae1d9b06a54);
+        
+    
+        var popup_8deea87743713b0793928c4f074104ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1051556fb3f070fc7d7a01ccfb254562 = $(`<div id="html_1051556fb3f070fc7d7a01ccfb254562" style="width: 100.0%; height: 100.0%;">Cusipata (Pueblo)<br>Population: 4645</div>`)[0];
+                popup_8deea87743713b0793928c4f074104ab.setContent(html_1051556fb3f070fc7d7a01ccfb254562);
+            
+        
+
+        marker_538d6e8bf87c8535b10b93e859e2b28c.bindPopup(popup_8deea87743713b0793928c4f074104ab)
+        ;
+
+        
+    
+    
+            var marker_e43618d0a7b481408d65c1d88c76087b = L.marker(
+                [-13.690277777777778, -71.64027777777778],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_68a60a12c097353e786e3943ab9fc481 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e43618d0a7b481408d65c1d88c76087b.setIcon(icon_68a60a12c097353e786e3943ab9fc481);
+        
+    
+        var popup_e7dff74749dbc43216b0ff8e623a7e1e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e60b4e87acdca274e66c4992f5acb073 = $(`<div id="html_e60b4e87acdca274e66c4992f5acb073" style="width: 100.0%; height: 100.0%;">Huaro (Pueblo)<br>Population: 5055</div>`)[0];
+                popup_e7dff74749dbc43216b0ff8e623a7e1e.setContent(html_e60b4e87acdca274e66c4992f5acb073);
+            
+        
+
+        marker_e43618d0a7b481408d65c1d88c76087b.bindPopup(popup_e7dff74749dbc43216b0ff8e623a7e1e)
+        ;
+
+        
+    
+    
+            var marker_4e23312444a5276d5c44f3b241fe8dd4 = L.marker(
+                [-13.633888888888889, -71.73666666666666],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_3a8b9edea812a27ac762962405d2f368 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_4e23312444a5276d5c44f3b241fe8dd4.setIcon(icon_3a8b9edea812a27ac762962405d2f368);
+        
+    
+        var popup_dd79b825f9d9e9fdbc65f2185c7c9583 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b019f52ce5df2c83dfd29ca6964ba2d = $(`<div id="html_7b019f52ce5df2c83dfd29ca6964ba2d" style="width: 100.0%; height: 100.0%;">Lucre (Pueblo)<br>Population: 5510</div>`)[0];
+                popup_dd79b825f9d9e9fdbc65f2185c7c9583.setContent(html_7b019f52ce5df2c83dfd29ca6964ba2d);
+            
+        
+
+        marker_4e23312444a5276d5c44f3b241fe8dd4.bindPopup(popup_dd79b825f9d9e9fdbc65f2185c7c9583)
+        ;
+
+        
+    
+    
+            var marker_43ece409f06ff92df6d5558c54b53958 = L.marker(
+                [-13.591666666666667, -70.97500000000001],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_618762e842470fbdccbc49d560c73881 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_43ece409f06ff92df6d5558c54b53958.setIcon(icon_618762e842470fbdccbc49d560c73881);
+        
+    
+        var popup_093afe9c5b9d9b0e5e58895598a65095 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14ab9b07c1891bcca007332f35074ae4 = $(`<div id="html_14ab9b07c1891bcca007332f35074ae4" style="width: 100.0%; height: 100.0%;">Marcapata (Pueblo)<br>Population: 5008</div>`)[0];
+                popup_093afe9c5b9d9b0e5e58895598a65095.setContent(html_14ab9b07c1891bcca007332f35074ae4);
+            
+        
+
+        marker_43ece409f06ff92df6d5558c54b53958.bindPopup(popup_093afe9c5b9d9b0e5e58895598a65095)
+        ;
+
+        
+    
+    
+            var marker_f6fbced1dbc68db34fbbd92d0e35fd01 = L.marker(
+                [-13.626666666666667, -71.38833333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_1388ad2ea04bf86ff7fbf01684c905e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f6fbced1dbc68db34fbbd92d0e35fd01.setIcon(icon_1388ad2ea04bf86ff7fbf01684c905e0);
+        
+    
+        var popup_a31836781562227c40d31ef461c01d61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd0e746c1dee0ba0044b28aad71cd03a = $(`<div id="html_bd0e746c1dee0ba0044b28aad71cd03a" style="width: 100.0%; height: 100.0%;">Ocongate (Pueblo)<br>Population: 19224</div>`)[0];
+                popup_a31836781562227c40d31ef461c01d61.setContent(html_bd0e746c1dee0ba0044b28aad71cd03a);
+            
+        
+
+        marker_f6fbced1dbc68db34fbbd92d0e35fd01.bindPopup(popup_a31836781562227c40d31ef461c01d61)
+        ;
+
+        
+    
+    
+            var marker_6b04643a3bb666b992ecebc4cf2716a7 = L.marker(
+                [-13.594444444444445, -71.76305555555555],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_fbe41a5f917afe6c67c643ec0d0227cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6b04643a3bb666b992ecebc4cf2716a7.setIcon(icon_fbe41a5f917afe6c67c643ec0d0227cf);
+        
+    
+        var popup_8282f0db12595c5763a5eac083e2c76d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b273283ec53b5118710c086f730742be = $(`<div id="html_b273283ec53b5118710c086f730742be" style="width: 100.0%; height: 100.0%;">Oropesa (Pueblo)<br>Population: 12583</div>`)[0];
+                popup_8282f0db12595c5763a5eac083e2c76d.setContent(html_b273283ec53b5118710c086f730742be);
+            
+        
+
+        marker_6b04643a3bb666b992ecebc4cf2716a7.bindPopup(popup_8282f0db12595c5763a5eac083e2c76d)
+        ;
+
+        
+    
+    
+            var marker_1b3a60974d87e9f88ac8dc967771dd8e = L.marker(
+                [-13.8225, -71.5425],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_cd703074c28e348e319bff8c0c6f5090 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1b3a60974d87e9f88ac8dc967771dd8e.setIcon(icon_cd703074c28e348e319bff8c0c6f5090);
+        
+    
+        var popup_65e552d47a7c376f50eef7aef20a66c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1f3a2db16db466a0156e14f63ef5fc3 = $(`<div id="html_b1f3a2db16db466a0156e14f63ef5fc3" style="width: 100.0%; height: 100.0%;">Quiquijana (Pueblo)<br>Population: 12084</div>`)[0];
+                popup_65e552d47a7c376f50eef7aef20a66c6.setContent(html_b1f3a2db16db466a0156e14f63ef5fc3);
+            
+        
+
+        marker_1b3a60974d87e9f88ac8dc967771dd8e.bindPopup(popup_65e552d47a7c376f50eef7aef20a66c6)
+        ;
+
+        
+    
+    
+            var marker_bcc06230ad1b389ab31934480edf4ef3 = L.marker(
+                [-13.305555555555557, -72.11611111111111],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_aa55f97d9e66de3b1c34b4ab86220807 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bcc06230ad1b389ab31934480edf4ef3.setIcon(icon_aa55f97d9e66de3b1c34b4ab86220807);
+        
+    
+        var popup_9f02dc4809e3003cb0de08dc4cc9469c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_647a50ed6b545c897a70f6559836a9c3 = $(`<div id="html_647a50ed6b545c897a70f6559836a9c3" style="width: 100.0%; height: 100.0%;">Urubamba (Ciudad)<br>Population: 24885</div>`)[0];
+                popup_9f02dc4809e3003cb0de08dc4cc9469c.setContent(html_647a50ed6b545c897a70f6559836a9c3);
+            
+        
+
+        marker_bcc06230ad1b389ab31934480edf4ef3.bindPopup(popup_9f02dc4809e3003cb0de08dc4cc9469c)
+        ;
+
+        
+    
+    
+            var marker_cc1fb5fb317f42413e677cbd7b5ed6cf = L.marker(
+                [-13.391944444444444, -72.04888888888888],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_29e73ba57568bdc625e79b528f049a20 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cc1fb5fb317f42413e677cbd7b5ed6cf.setIcon(icon_29e73ba57568bdc625e79b528f049a20);
+        
+    
+        var popup_ba1aee2b3206de41a9a1af2779d2cfe0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee1d262e1a8d1e9a17f0e760221ad0f2 = $(`<div id="html_ee1d262e1a8d1e9a17f0e760221ad0f2" style="width: 100.0%; height: 100.0%;">Chinchero (Pueblo)<br>Population: 12825</div>`)[0];
+                popup_ba1aee2b3206de41a9a1af2779d2cfe0.setContent(html_ee1d262e1a8d1e9a17f0e760221ad0f2);
+            
+        
+
+        marker_cc1fb5fb317f42413e677cbd7b5ed6cf.bindPopup(popup_ba1aee2b3206de41a9a1af2779d2cfe0)
+        ;
+
+        
+    
+    
+            var marker_52da71b22bc682411442184e0437cf60 = L.marker(
+                [-13.338055555555556, -72.065],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_af40ee4cc3b84392cecfa2fea31a9e86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_52da71b22bc682411442184e0437cf60.setIcon(icon_af40ee4cc3b84392cecfa2fea31a9e86);
+        
+    
+        var popup_4dc8a57738015ba914b6f898eae3dcb7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f380ebc07a6fa6397e0c14129ac6e301 = $(`<div id="html_f380ebc07a6fa6397e0c14129ac6e301" style="width: 100.0%; height: 100.0%;">Huayllabamba (Pueblo)<br>Population: 6529</div>`)[0];
+                popup_4dc8a57738015ba914b6f898eae3dcb7.setContent(html_f380ebc07a6fa6397e0c14129ac6e301);
+            
+        
+
+        marker_52da71b22bc682411442184e0437cf60.bindPopup(popup_4dc8a57738015ba914b6f898eae3dcb7)
+        ;
+
+        
+    
+    
+            var marker_45d07280182d497588d08e71865d55f9 = L.marker(
+                [-13.154166666666667, -72.52555555555556],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_35eb44b5fed5f978ada97fcc5f437900 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_45d07280182d497588d08e71865d55f9.setIcon(icon_35eb44b5fed5f978ada97fcc5f437900);
+        
+    
+        var popup_3de71bd4fb9b8b92c64d9c7482635132 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec2166b5d7105ecb69b9bd0d6f365380 = $(`<div id="html_ec2166b5d7105ecb69b9bd0d6f365380" style="width: 100.0%; height: 100.0%;">Machupicchu (Pueblo)<br>Population: 5761</div>`)[0];
+                popup_3de71bd4fb9b8b92c64d9c7482635132.setContent(html_ec2166b5d7105ecb69b9bd0d6f365380);
+            
+        
+
+        marker_45d07280182d497588d08e71865d55f9.bindPopup(popup_3de71bd4fb9b8b92c64d9c7482635132)
+        ;
+
+        
+    
+    
+            var marker_20975504371e7df968e6e5d5d9923003 = L.marker(
+                [-13.3325, -72.1563888888889],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_a64a7b3ab036eee7b21f952b9d85ed74 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_20975504371e7df968e6e5d5d9923003.setIcon(icon_a64a7b3ab036eee7b21f952b9d85ed74);
+        
+    
+        var popup_803e3b9f94cceb3a6f86416778896aa1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb46fca783e0fbaab477ca65d908b1e6 = $(`<div id="html_cb46fca783e0fbaab477ca65d908b1e6" style="width: 100.0%; height: 100.0%;">Maras (Pueblo)<br>Population: 6839</div>`)[0];
+                popup_803e3b9f94cceb3a6f86416778896aa1.setContent(html_cb46fca783e0fbaab477ca65d908b1e6);
+            
+        
+
+        marker_20975504371e7df968e6e5d5d9923003.bindPopup(popup_803e3b9f94cceb3a6f86416778896aa1)
+        ;
+
+        
+    
+    
+            var marker_09179c95466e9226273d183835291fff = L.marker(
+                [-13.258888888888889, -72.26333333333334],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_124cfc105a20a62cf2bc59f62e3bc4a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_09179c95466e9226273d183835291fff.setIcon(icon_124cfc105a20a62cf2bc59f62e3bc4a3);
+        
+    
+        var popup_49a3161d61eddf6e6b92b28d2b343ac9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13408dcd9e4bd3711be9cb1018468dde = $(`<div id="html_13408dcd9e4bd3711be9cb1018468dde" style="width: 100.0%; height: 100.0%;">Ollantaytambo (Pueblo)<br>Population: 12061</div>`)[0];
+                popup_49a3161d61eddf6e6b92b28d2b343ac9.setContent(html_13408dcd9e4bd3711be9cb1018468dde);
+            
+        
+
+        marker_09179c95466e9226273d183835291fff.bindPopup(popup_49a3161d61eddf6e6b92b28d2b343ac9)
+        ;
+
+        
+    
+    
+            var marker_e5dfb384388ae5b5d580be1684426cb7 = L.marker(
+                [-13.321666666666667, -72.08388888888888],
+                {}
+            ).addTo(map_5bb6119e372cf097f729ba71bc949b19);
+        
+    
+            var icon_d719649405e747feb0a16fced04e4ebe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e5dfb384388ae5b5d580be1684426cb7.setIcon(icon_d719649405e747feb0a16fced04e4ebe);
+        
+    
+        var popup_88626074c410d59cbe11cdcd3354de35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ab478c4f9b79a528b35766bf209bf7ac = $(`<div id="html_ab478c4f9b79a528b35766bf209bf7ac" style="width: 100.0%; height: 100.0%;">Yucay (Pueblo)<br>Population: 3444</div>`)[0];
+                popup_88626074c410d59cbe11cdcd3354de35.setContent(html_ab478c4f9b79a528b35766bf209bf7ac);
+            
+        
+
+        marker_e5dfb384388ae5b5d580be1684426cb7.bindPopup(popup_88626074c410d59cbe11cdcd3354de35)
+        ;
+
+        
+    
+</script>
+</html>
