@@ -31,6 +31,7 @@ communities_df = pd.read_excel('Data.xlsx', sheet_name='Population_Community')
 communities_df['latitude'] = communities_df['latitude (south)'].apply(lambda x: dms_to_dd(x, 'S'))
 communities_df['longitude'] = communities_df['longitude (west)'].apply(lambda x: dms_to_dd(x, 'W'))
 
+# communities_df = communities_df[communities_df['province'] == 'Cusco']
 '''
 Before:
 location_id province       district category  altitude longitude (west) latitude (south)  population
@@ -130,7 +131,7 @@ for _, row in geo_df.iterrows():
 
 # Add basemap background using OpenStreetMap
 ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik)
-# ctx.add_basemap(ax, source=ctx.providers.Esri.WorldImagery)
+#ctx.add_basemap(ax, source=ctx.providers.Esri.WorldImagery)
 
 # Customizing plot
 plt.title("Communities in Cusco with Basemap", fontsize=16)
