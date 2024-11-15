@@ -140,4 +140,4 @@ plt.ylabel("Latitude")
 plt.savefig('images/cusco_background_scatterplot.png')
 # plt.show()
 
-# To run: py data_generation.py
+# To run: py figure_generation.py
