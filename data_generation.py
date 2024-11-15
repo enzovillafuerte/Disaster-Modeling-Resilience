@@ -130,6 +130,7 @@ for _, row in geo_df.iterrows():
 
 # Add basemap background using OpenStreetMap
 ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik)
+# ctx.add_basemap(ax, source=ctx.providers.Esri.WorldImagery)
 
 # Customizing plot
 plt.title("Communities in Cusco with Basemap", fontsize=16)
