@@ -57,9 +57,34 @@ DISTANCE MATRIX FROM CI to Community (RADIUS)
 ############################################################################################
 '''
 
+# Earth radius in kilometers
+R = 6371.0
 
+def harversine(lat1, lon1, lat2, lon2):
+    """
+    Compute the harversine distance between two points on the surface 
+    To create the distance matrix between candidate main warehouses and communities
+    """
+
+    # Converting degrees to radians
+    lat1, lon1, lat2, lon2 = map(np.radians, [lat1, lon1, lat2, lon2])
+
+    # Differences in coordinates
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+
+    # Harversine formula
+    a = np.sin(dlat / 2)**2 + np.cos(lat1) * np.cos(lat2) * np.sin(dlon / 2)**2
+    c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1 - a))
+    distance = R * c
+    return distance
+
+
+# Creating an empty distance matrix (Notation: Dji)
+dji_matrix = pd.DataFrame(index=communities_df['District'], columns=wh_df['wh_id'])
 
 
 
 # To run:
 # Windows: py matrix_data_generation.py
+# Mac: python matrix_data_generation.py
