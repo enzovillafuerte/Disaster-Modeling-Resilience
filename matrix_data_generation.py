@@ -48,8 +48,8 @@ After:
 
 '''
 
-print(communities_df)
-print(wh_df)
+print(communities_df.head(3))
+print(wh_df.head(3))
 
 '''
 ############################################################################################
@@ -81,10 +81,23 @@ def harversine(lat1, lon1, lat2, lon2):
 
 
 # Creating an empty distance matrix (Notation: Dji)
-dji_matrix = pd.DataFrame(index=communities_df['District'], columns=wh_df['wh_id'])
+# The distance Matrix is in (km)
+dji_matrix = pd.DataFrame(index=communities_df['district'], columns=wh_df['wh_id'])
+
+# Computing distances
+for i, comm_row in communities_df.iterrows():
+    for j, ware_row in wh_df.iterrows():
+        
+        # applying harversine formula to get the distances
+        distance = harversine(comm_row['latitude'], comm_row['longitude'], ware_row['latitude'], ware_row['longitude'])
+        
+        # populating the matrix
+        dji_matrix.loc[comm_row['district'], ware_row['wh_id']] = distance
 
 
 
+print('Success')
+print(dji_matrix)
 # To run:
 # Windows: py matrix_data_generation.py
 # Mac: python matrix_data_generation.py
