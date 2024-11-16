@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 import folium
 import contextily as ctx
 
+
+
 '''
 ############################################################################################
 LATITUDE AND LONGITUDE TRANSFORMATION (BOTH COMMUNITY AND CI)
@@ -24,7 +26,6 @@ def dms_to_dd(dms_str, direction):
     return dd
 
 # Loading data
-# Start Plotting the Different communities in a Cusco Map and Displaying the Map
 communities_df = pd.read_excel('Data.xlsx', sheet_name='Population_Community')
 wh_df = pd.read_excel('Data.xlsx', sheet_name='Critical_Infrastructure')
 
@@ -53,7 +54,28 @@ print(wh_df.head(3))
 
 '''
 ############################################################################################
-DISTANCE MATRIX FROM CI to Community (RADIUS)
+POPULATION DEMAND for community J (Pj)
+############################################################################################
+'''
+
+population_data = communities_df[['location_id', 'district', 'latitude', 'longitude', 'population']]
+population_data.to_csv('processed_data/Pj.csv', index=False)
+
+'''
+############################################################################################
+COST OF ESTABLISHING MAIN WAREHOUSE i (Ci)
+############################################################################################
+'''
+
+'''
+############################################################################################
+COST OF ESTABLISHING Backup Facility k (Rk)
+############################################################################################
+'''
+
+'''
+############################################################################################
+DISTANCE MATRIX FROM CI to Community (RADIUS) (Dji)
 ############################################################################################
 '''
 
@@ -103,7 +125,7 @@ print(dji_matrix)
 
 '''
 ############################################################################################
-DISTANCE MATRIX FROM CI to BACKUP FACILITIES (RADIUS)
+DISTANCE MATRIX FROM CI to BACKUP FACILITIES (RADIUS) (Bik)
 ############################################################################################
 '''
 
