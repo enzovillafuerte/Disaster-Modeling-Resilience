@@ -98,11 +98,7 @@ for i, comm_row in communities_df.iterrows():
 dji_matrix.to_csv('processed_data/dji_matrix.csv')
 
 
-print('Success')
 print(dji_matrix)
-# To run:
-# Windows: py matrix_data_generation.py
-# Mac: python matrix_data_generation.py
 
 
 '''
@@ -110,3 +106,29 @@ print(dji_matrix)
 DISTANCE MATRIX FROM CI to BACKUP FACILITIES (RADIUS)
 ############################################################################################
 '''
+
+# Creating an empty distance matrix (Notation: )
+# The distance matrix is in (km)
+bik_matrix = pd.DataFrame(index=wh_df['wh_id'], columns=wh_df['wh_id'])
+
+# Computing distances
+for i, wh_row in wh_df.iterrows():
+    for k, bu_row in wh_df.iterrows():
+
+        # applying harversine
+        distance = harversine(wh_row['latitude'], wh_row['longitude'], bu_row['latitude'], bu_row['longitude'])
+
+        # populating the matrix
+        bik_matrix.loc[wh_row['wh_id'], bu_row['wh_id']] = distance
+
+
+# Saving the matrix into a csv file
+bik_matrix.to_csv('processed_data/bik_matrix.csv')
+
+print(bik_matrix)
+
+print('Success')
+
+# To run:
+# Windows: py matrix_data_generation.py
+# Mac: python matrix_data_generation.py
