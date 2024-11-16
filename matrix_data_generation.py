@@ -94,6 +94,8 @@ for i, comm_row in communities_df.iterrows():
         # populating the matrix
         dji_matrix.loc[comm_row['district'], ware_row['wh_id']] = distance
 
+# Saving the matrix into a csv file
+dji_matrix.to_csv('processed_data/dji_matrix.csv')
 
 
 print('Success')
@@ -101,3 +103,10 @@ print(dji_matrix)
 # To run:
 # Windows: py matrix_data_generation.py
 # Mac: python matrix_data_generation.py
+
+
+'''
+############################################################################################
+DISTANCE MATRIX FROM CI to BACKUP FACILITIES (RADIUS)
+############################################################################################
+'''
