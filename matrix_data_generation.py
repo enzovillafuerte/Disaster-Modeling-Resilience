@@ -107,10 +107,11 @@ def harversine(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
 
-
+'''
 # Creating an empty distance matrix (Notation: Dji)
 # The distance Matrix is in (km)
 dji_matrix = pd.DataFrame(index=communities_df['district'], columns=wh_df['wh_id'])
+# dji_matrix = pd.DataFrame(index=wh_df['wh_id'], columns=communities_df['district'])
 
 # Computing distances
 for i, comm_row in communities_df.iterrows():
@@ -121,6 +122,22 @@ for i, comm_row in communities_df.iterrows():
         
         # populating the matrix
         dji_matrix.loc[comm_row['district'], ware_row['wh_id']] = distance
+'''
+
+# Creating an empty distance matrix (Notation: Dji)
+# The distance Matrix is in (km)
+dji_matrix = pd.DataFrame(index=wh_df['wh_id'], columns=communities_df['district'])
+
+# Computing distances
+for i, comm_row in communities_df.iterrows():
+    for j, ware_row in wh_df.iterrows():
+        
+        # applying harversine formula to get the distances
+        distance = harversine(comm_row['latitude'], comm_row['longitude'], ware_row['latitude'], ware_row['longitude'])
+        
+        # populating the matrix
+        dji_matrix.loc[ware_row['wh_id'], comm_row['district']] = distance
+
 
 # Saving the matrix into a csv file
 dji_matrix.to_csv('processed_data/dji_matrix.csv')
