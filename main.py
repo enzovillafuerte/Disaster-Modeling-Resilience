@@ -5,6 +5,11 @@ import numpy as np
 import networkx as nx 
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+import folium
+import contextily as ctx
+import geopandas as gpd
+from shapely.geometry import Point
+import re
 
 ##############################################
 ################ DATA SECTION ################ 
@@ -22,7 +27,6 @@ backup_df = pd.read_csv('processed_data/Rk.csv')
 distances_main_df = pd.read_csv('processed_data/dji_matrix.csv')
 
 distances_backup_df = pd.read_csv('processed_data/bik_matrix.csv')
-
 
 
 # Convert dataframes to dictionaries
@@ -243,6 +247,13 @@ plt.legend(handles=legend_elements, loc='upper left')
 
 plt.title("Direct Network Connectivity Including Backup Facilities")
 plt.show()
+
+
+##############################################
+########## NETWORK REPRESENTATION (2)############ 
+##############################################
+
+
 
 
 ##############################################
