@@ -201,6 +201,7 @@ else:
 ########## NETWORK REPRESENTATION ############ 
 ##############################################
 
+
 G = nx.DiGraph()
 
 # Add nodes for Communities, Warehouses, and Backup Facilities
@@ -232,6 +233,8 @@ plt.figure(figsize=(10, 8))
 # Assign colors to nodes based on their type for clearer visualization
 color_map = [G.nodes[node]['color'] for node in G]
 
+
+
 # Draw the graph with node labels and colors
 pos = nx.spring_layout(G, seed=42)  # Fixed layout for consistency
 nx.draw(G, pos, with_labels=True, node_color=color_map, node_size=800, font_size=10, font_color='white', font_weight='bold', edge_color='gray', arrows=True)
@@ -252,6 +255,68 @@ plt.show()
 ##############################################
 ########## NETWORK REPRESENTATION (2)############ 
 ##############################################
+# Map node IDs to (longitude, latitude) tuples
+community_locations = dict(zip(communities_df['district'], zip(communities_df['longitude'], communities_df['latitude'])))
+warehouse_locations = dict(zip(warehouses_df['wh_id'], zip(warehouses_df['longitude'], warehouses_df['latitude'])))
+backup_locations = dict(zip(backup_df['wh_id'], zip(backup_df['longitude'], backup_df['latitude'])))
+
+# Combine all location data into one dictionary
+all_locations = {**community_locations, **warehouse_locations, **backup_locations}
+
+G = nx.DiGraph()
+
+# Add nodes for Communities, Warehouses, and Backup Facilities
+G = nx.DiGraph()
+for community in C:
+    G.add_node(community, label="Community", color='blue', size=800)
+for warehouse in I:
+    G.add_node(warehouse, label="Warehouse", color='green', size=150)
+for backup in J:
+    G.add_node(backup, label="Backup Facility", color='red', size=100)
+
+# Add edges for Community-to-Warehouse connections
+for (community, warehouse), connected in community_warehouse_matrix.items():
+    if connected == 1:
+        G.add_edge(warehouse, community)  # Warehouse serves Community
+
+# Add edges for Warehouse-to-Backup connections
+for (warehouse, backup), connected in warehouse_backup_matrix.items():
+    if connected == 1:
+        G.add_edge(warehouse, backup)  # Warehouse is backed up by Backup Facility
+
+# Add edges for Backup-to-Community connections (inheritance)
+for (community, backup), connected in backup_community_matrix.items():
+    if connected == 1:
+        G.add_edge(backup, community)  # Backup Facility directly connects to Community
+
+# Step 3: Visualize the network
+plt.figure(figsize=(10, 8))
+
+# Assign colors to nodes based on their type for clearer visualization
+color_map = [G.nodes[node]['color'] for node in G]
+
+# Assign node sizes
+node_sizes = [G.nodes[node]['size'] for node in G]
+
+# Use spatial positions based on longitude and latitude
+pos = {node: all_locations[node] for node in G.nodes}
+
+# Draw the graph with node labels and colors
+nx.draw(
+    G, pos, with_labels=True, node_color=color_map, node_size=node_sizes, font_size=6,
+    font_color='black', font_weight='bold', edge_color='gray', arrows=True
+)
+
+# Customize legend
+legend_elements = [
+    Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='Warehouse', markerfacecolor='green', markersize=8),
+    Line2D([0], [0], marker='o', color='w', label='Backup Facility', markerfacecolor='red', markersize=6)
+]
+plt.legend(handles=legend_elements, loc='upper left')
+
+plt.title("Spatially Fixed Network Connectivity Including Backup Facilities")
+plt.show()
 
 
 
