@@ -253,4 +253,4 @@ print('Success')
 
 
 
-# To run: python main.py
+# To run: python main_syn.py
