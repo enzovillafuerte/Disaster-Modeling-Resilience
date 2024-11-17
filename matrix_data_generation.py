@@ -58,7 +58,7 @@ POPULATION DEMAND for community J (Pj)
 ############################################################################################
 '''
 
-population_data = communities_df[['location_id', 'district', 'latitude', 'longitude', 'population']]
+population_data = communities_df[['location_id', 'province', 'district', 'latitude', 'longitude', 'population']]
 population_data.to_csv('processed_data/Pj.csv', index=False)
 
 '''

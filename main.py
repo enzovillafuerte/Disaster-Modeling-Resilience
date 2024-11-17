@@ -12,6 +12,9 @@ from matplotlib.lines import Line2D
 
 # Loading data from the CSVs
 communities_df = pd.read_csv('processed_data/Pj.csv')
+target_provinces = ['Cusco', 'Anta', 'Calca', 'Urubamba'] # Consider adding more provinces. This is good for Case Study Deliverable
+communities_df = communities_df[communities_df['province'].isin(target_provinces)] # Keeping only communities within the specific district ~ for smaller model
+
 warehouses_df = pd.read_csv('processed_data/Ci.csv')
 backup_df = pd.read_csv('processed_data/Rk.csv')
 
@@ -240,6 +243,40 @@ plt.legend(handles=legend_elements, loc='upper left')
 
 plt.title("Direct Network Connectivity Including Backup Facilities")
 plt.show()
+
+
+##############################################
+############### FINAL MATRIX ################# 
+##############################################
+
+# Define all nodes (communities, warehouses, and backup facilities)
+nodes = C + I + J
+
+# Initialize an empty DataFrame to store the combined connectivity matrix
+combined_matrix = pd.DataFrame(0, index=nodes, columns=nodes)
+
+# Add Community-to-Warehouse connections
+for (community, warehouse), connected in community_warehouse_matrix.items():
+    if connected == 1:
+        combined_matrix.loc[warehouse, community] = 1  # Warehouse to Community
+
+# Add Warehouse-to-Backup connections
+for (warehouse, backup), connected in warehouse_backup_matrix.items():
+    if connected == 1:
+        combined_matrix.loc[warehouse, backup] = 1  # Warehouse to Backup
+
+# Add Backup-to-Community connections (from inherited links)
+for (community, backup), connected in backup_community_matrix.items():
+    if connected == 1:
+        combined_matrix.loc[backup, community] = 1  # Backup directly to Community
+
+# Display the combined connectivity matrix
+print("Combined Connectivity Matrix:")
+print(combined_matrix)
+
+
+
+
 
 
 
