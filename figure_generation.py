@@ -31,6 +31,10 @@ communities_df = pd.read_excel('Data.xlsx', sheet_name='Population_Community')
 communities_df['latitude'] = communities_df['latitude (south)'].apply(lambda x: dms_to_dd(x, 'S'))
 communities_df['longitude'] = communities_df['longitude (west)'].apply(lambda x: dms_to_dd(x, 'W'))
 
+# Keeping target provinces for Case Study
+target_provinces = ['Cusco', 'Anta', 'Calca', 'Urubamba'] # Consider adding more provinces. This is good for Case Study Deliverable
+communities_df = communities_df[communities_df['province'].isin(target_provinces)] # Keeping only communities within the specific district ~ for smaller model
+
 # communities_df = communities_df[communities_df['province'] == 'Cusco']
 '''
 Before:
@@ -140,4 +144,6 @@ plt.ylabel("Latitude")
 plt.savefig('images/cusco_background_scatterplot.png')
 # plt.show()
 
-# To run: py figure_generation.py
+# To run: 
+# Mac: python figure_generation.py
+# Windows: py figure_generation.py
