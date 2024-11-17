@@ -74,7 +74,7 @@ z = model.addVars(J, vtype=GRB.BINARY, name='z')  # Backup facility selection [Z
 y = model.addVars(I, C, vtype=GRB.BINARY, name='y')  # Communities being covered by Warehouses [Yij]
 w = model.addVars(I, J, vtype=GRB.BINARY, name='w')  # Back-Up facilities covering Main Warehouse
 
-# Objective Function
+# OF
 model.setObjective(
     gp.quicksum(cost_main[i] * x[i] for i in I) + 
     gp.quicksum(demand[j] * dist_main[i, j] * y[i, j] for i in I for j in C) +
@@ -245,6 +245,8 @@ plt.show()
 
 print('Success')
 
+
+# Potential new constraints! One backup facility can only cover a maximum of 3 main warehouses
 # 
 # Mac: python main.py
 # Windows: py main.py
