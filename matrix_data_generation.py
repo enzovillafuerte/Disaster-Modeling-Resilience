@@ -66,12 +66,18 @@ population_data.to_csv('processed_data/Pj.csv', index=False)
 COST OF ESTABLISHING MAIN WAREHOUSE i (Ci)
 ############################################################################################
 '''
+ci_cost = wh_df[wh_df['type'] == 'Main']
+ci_cost = ci_cost[['wh_id', 'longitude', 'latitude', 'cost']]
+ci_cost.to_csv('processed_data/Ci.csv', index=False)
 
 '''
 ############################################################################################
 COST OF ESTABLISHING Backup Facility k (Rk)
 ############################################################################################
 '''
+rk_cost = wh_df[wh_df['type'] != 'Main']
+rk_cost = rk_cost[['wh_id', 'longitude', 'latitude', 'cost']]
+rk_cost.to_csv('processed_data/Rk.csv', index=False)
 
 '''
 ############################################################################################
