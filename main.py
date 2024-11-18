@@ -113,6 +113,10 @@ for i in I:
     for k in J:
         model.addConstr(w[i,k] <= z[k], f'BackupOpenIfCovering_{i}_{k}')
 
+# C5: Limit the number of Warehouses covered by each BackUp Facilities
+for k in J:
+    model.addConstr(gp.quicksum(w[i, k] for i in I) <= 3, f'MaxWarehousesPerBackup_{k}')
+
 # Solvingd the model
 model.optimize()
 
