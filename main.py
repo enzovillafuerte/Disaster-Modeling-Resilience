@@ -342,6 +342,72 @@ plt.savefig('images/opt_output_network_flocation.png')
 plt.show()
 
 
+##############################################
+########## NETWORK REPRESENTATION (3)############ 
+##############################################
+
+# Showing only Opened Warehouses and BackUp facilities
+# Filter for only opened Main Warehouses and Backup Facilities
+opened_warehouses = set(warehouse for (_, warehouse), connected in community_warehouse_matrix.items() if connected == 1)
+opened_backups = set(backup for (_, backup), connected in warehouse_backup_matrix.items() if connected == 1)
+
+# Add nodes for Communities, filtering Main Warehouses and Backup Facilities
+G = nx.DiGraph()
+for community in C:
+    G.add_node(community, label="Community", color='blue', size=800)
+for warehouse in I:
+    if warehouse in opened_warehouses:  # Add only opened Main Warehouses
+        G.add_node(warehouse, label="Warehouse", color='green', size=150)
+for backup in J:
+    if backup in opened_backups:  # Add only opened Backup Facilities
+        G.add_node(backup, label="Backup Facility", color='red', size=100)
+
+# Add edges for Community-to-Warehouse connections
+for (community, warehouse), connected in community_warehouse_matrix.items():
+    if connected == 1 and warehouse in opened_warehouses:
+        G.add_edge(warehouse, community)  # Warehouse serves Community
+
+# Add edges for Warehouse-to-Backup connections
+for (warehouse, backup), connected in warehouse_backup_matrix.items():
+    if connected == 1 and backup in opened_backups:
+        G.add_edge(warehouse, backup)  # Warehouse is backed up by Backup Facility
+
+# Add edges for Backup-to-Community connections (inheritance)
+for (community, backup), connected in backup_community_matrix.items():
+    if connected == 1 and backup in opened_backups:
+        G.add_edge(backup, community)  # Backup Facility directly connects to Community
+
+# Step 3: Visualize the network
+plt.figure(figsize=(10, 8))
+
+# Assign colors to nodes based on their type for clearer visualization
+color_map = [G.nodes[node]['color'] for node in G]
+
+# Assign node sizes
+node_sizes = [G.nodes[node]['size'] for node in G]
+
+# Use spatial positions based on longitude and latitude
+pos = {node: all_locations[node] for node in G.nodes}
+
+# Draw the graph with node labels and colors
+nx.draw(
+    G, pos, with_labels=True, node_color=color_map, node_size=node_sizes, font_size=6,
+    font_color='black', font_weight='bold', edge_color='gray', arrows=True
+)
+
+# Customize legend
+legend_elements = [
+    Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='Warehouse (Opened)', markerfacecolor='green', markersize=8),
+    Line2D([0], [0], marker='o', color='w', label='Backup Facility (Opened)', markerfacecolor='red', markersize=6)
+]
+plt.legend(handles=legend_elements, loc='upper left')
+
+plt.title("Spatially Fixed Network Connectivity Including Opened Facilities")
+plt.savefig('images/opt_output_network_flocation_opened.png')
+
+plt.show()
+
 
 
 ##############################################
