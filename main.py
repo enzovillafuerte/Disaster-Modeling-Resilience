@@ -10,6 +10,7 @@ import contextily as ctx
 import geopandas as gpd
 from shapely.geometry import Point
 import re
+import json
 
 ##############################################
 ################ DATA SECTION ################ 
@@ -153,7 +154,13 @@ if model.status == GRB.OPTIMAL:
     for j in C:
         print(f"{j}: " + " ".join([str(community_warehouse_matrix[(j, i)]) for i in I]))
 
-    # community_warehouse_matrix.to_csv('data_quality_check/Community-to-Warehouse-Matrix.csv', index=False)
+    
+    # Convert dictionary keys (tuples) to strings for JSON serialization
+    json_compatible_dict = {str(key): value for key, value in community_warehouse_matrix.items()}
+
+    # Save the updated dictionary to a JSON file
+    with open('data_quality_check/Community-to-Warehouse-Matrix.json', 'w') as json_file:
+        json.dump(json_compatible_dict, json_file, indent=4)
 
     ############################################
     # Warehouse-to-Backup Connectivity Matrix
@@ -177,7 +184,13 @@ if model.status == GRB.OPTIMAL:
     for i in I:
         print(f"{i}: " + " ".join([str(warehouse_backup_matrix[(i, k)]) for k in J]))
 
-    # Export for Data Quality check 
+    # Convert dictionary keys (tuples) to strings for JSON serialization
+    json_compatible_dict_ = {str(key): value for key, value in warehouse_backup_matrix.items()}
+
+    # Save the updated dictionary to a JSON file
+    with open('data_quality_check/Warehouse-to-Backup-Matrix.json', 'w') as json_file:
+        json.dump(json_compatible_dict_, json_file, indent=4)
+    # Export for Data Quality check - save in json format
     # warehouse_backup_matrix.to_csv('data_quality_check/Warehouse-to-Backup-Matrix.csv', index=False)
 
     ############################################
