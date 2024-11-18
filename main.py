@@ -153,6 +153,8 @@ if model.status == GRB.OPTIMAL:
     for j in C:
         print(f"{j}: " + " ".join([str(community_warehouse_matrix[(j, i)]) for i in I]))
 
+    # community_warehouse_matrix.to_csv('data_quality_check/Community-to-Warehouse-Matrix.csv', index=False)
+
     ############################################
     # Warehouse-to-Backup Connectivity Matrix
     ############################################
@@ -174,6 +176,9 @@ if model.status == GRB.OPTIMAL:
     print("   " + " ".join([f"{k}" for k in J]))
     for i in I:
         print(f"{i}: " + " ".join([str(warehouse_backup_matrix[(i, k)]) for k in J]))
+
+    # Export for Data Quality check 
+    # warehouse_backup_matrix.to_csv('data_quality_check/Warehouse-to-Backup-Matrix.csv', index=False)
 
     ############################################
     # Backup-to-Community Connectivity Matrix
@@ -360,6 +365,8 @@ print('Success')
 
 
 # Potential new constraints! One backup facility can only cover a maximum of 3 main warehouses
-# 
+# Potential Second part of the equation: minimize the maximum amount. for all connected to warehouse i, minimize tha maximum distance from backup to population of such warehouse?)
+# Potential new constraint: Capacity constraint 
+
 # Mac: python main.py
 # Windows: py main.py
