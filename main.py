@@ -267,6 +267,9 @@ legend_elements = [
 plt.legend(handles=legend_elements, loc='upper left')
 
 plt.title("Direct Network Connectivity Including Backup Facilities")
+plt.savefig('images/opt_output_network.png')
+
+
 plt.show()
 
 
@@ -334,6 +337,8 @@ legend_elements = [
 plt.legend(handles=legend_elements, loc='upper left')
 
 plt.title("Spatially Fixed Network Connectivity Including Backup Facilities")
+plt.savefig('images/opt_output_network_flocation.png')
+
 plt.show()
 
 
