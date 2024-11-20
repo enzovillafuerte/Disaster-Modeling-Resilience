@@ -356,7 +356,7 @@ def main(argv):
     x1, y1, VD = degree(infile, recalculate)
     x2, y2, VB = betweenness(infile, recalculate)
     x3, y3, VC = closeness(infile, recalculate)
-    x4, y4, VE = eigenvector(infile, recalculate)
+    #x4, y4, VE = eigenvector(infile, recalculate)
     x5, y5, VR = rand(infile)
 
     pylab.figure(1, dpi = 500)
@@ -365,18 +365,20 @@ def main(argv):
     pylab.plot(x1, y1, "b-", alpha = 0.6, linewidth = 2.0)
     pylab.plot(x2, y2, "g-", alpha = 0.6, linewidth = 2.0)
     pylab.plot(x3, y3, "r-", alpha = 0.6, linewidth = 2.0)
-    pylab.plot(x4, y4, "c-", alpha = 0.6, linewidth = 2.0)
+    #pylab.plot(x4, y4, "c-", alpha = 0.6, linewidth = 2.0)
     pylab.plot(x5, y5, "k-", alpha = 0.6, linewidth = 2.0)
     pylab.legend((r"Degree ($V = %4.3f$)" %(VD), 
                   "Betweenness ($V = %4.3f$)" %(VB), 
                   "Closeness ($V = %4.3f$)" %(VC), 
-                  "Eigenvector ($V = %4.3f$)" %(VE), 
+                  #"Eigenvector ($V = %4.3f$)" %(VE), 
                   "Random ($V = %4.3f$)" %(VR)), 
                  loc = "upper right", shadow = False)
 
     # Inset showing vulnerability values.
-    labels = [r"$D$", r"$B$", r"$C$", r"$E$", r"$R$"]
-    V = [VD, VB, VC, VE, VR]
+    # labels = [r"$D$", r"$B$", r"$C$", r"$E$", r"$R$"]
+    labels = [r"$D$", r"$B$", r"$C$", r"$R$"]
+    # V = [VD, VB, VC, VE, VR]
+    V = [VD, VB, VC, VR]
     xlocations = numpy.array(range(len(V)))+0.2
     width = 0.2
     inset = pylab.axes([0.735, 0.45, 0.15, 0.15])
@@ -402,4 +404,4 @@ print("Success")
 # Mac: python robustness_analysis.py 'sample_network.gml'
 # python robustness.py <infile> <outfile> <recalculate>
 # python robustness_analysis.py 'sample_network.gml' 'sample_output.pdf' True
-# python robustness_analysis.py 'final_network.gml' 'final_output.pdf' True
+# python robustness_analysis.py 'final_network.gml' 'final_output_1.pdf' True
