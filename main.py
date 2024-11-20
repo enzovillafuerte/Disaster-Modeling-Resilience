@@ -444,7 +444,7 @@ print("Combined Connectivity Matrix:")
 print(combined_matrix)
 
 
-
+combined_matrix.to_csv('processed_data/connectivity_matrix.csv')
 
 
 
