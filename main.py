@@ -410,6 +410,8 @@ plt.legend(handles=legend_elements, loc='upper left')
 plt.title("Spatially Fixed Network Connectivity Including Opened Facilities")
 plt.savefig('images/opt_output_network_flocation_opened.png')
 
+nx.write_gml(G, "final_network.gml")
+
 plt.show()
 
 

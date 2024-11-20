@@ -47,7 +47,7 @@ def betweenness(infile, recalculate = False):
     l = sorted(m.items(), key = operator.itemgetter(1), reverse = True)
     x = []
     y = []
-    largest_component = max(networkx.connected_components(g), key = len)
+    largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
     n = len(g.nodes())
     x.append(0)
     y.append(len(largest_component) * 1. / n)
@@ -58,7 +58,7 @@ def betweenness(infile, recalculate = False):
             m = networkx.betweenness_centrality(g)
             l = sorted(m.items(), key = operator.itemgetter(1), 
                        reverse = True)
-        largest_component = max(networkx.connected_components(g), key = len)
+        largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
         x.append(i * 1. / n)
         R += len(largest_component) * 1. / n
         y.append(len(largest_component) * 1. / n)
@@ -108,7 +108,7 @@ def closeness(infile, recalculate = False):
     l = sorted(m.items(), key = operator.itemgetter(1), reverse = True)
     x = []
     y = []
-    largest_component = max(networkx.connected_components(g), key = len)
+    largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
     n = len(g.nodes())
     x.append(0)
     y.append(len(largest_component) * 1. / n)
@@ -119,7 +119,7 @@ def closeness(infile, recalculate = False):
             m = networkx.closeness_centrality(g)
             l = sorted(m.items(), key = operator.itemgetter(1), 
                        reverse = True)
-        largest_component = max(networkx.connected_components(g), key = len)
+        largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
         x.append(i * 1. / n)
         R += len(largest_component) * 1. / n
         y.append(len(largest_component) * 1. / n)
@@ -169,7 +169,7 @@ def degree(infile, recalculate = False):
     l = sorted(m.items(), key = operator.itemgetter(1), reverse = True)
     x = []
     y = []
-    largest_component = max(networkx.connected_components(g), key = len)
+    largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
     n = len(g.nodes())
     x.append(0)
     y.append(len(largest_component) * 1. / n)
@@ -180,7 +180,7 @@ def degree(infile, recalculate = False):
             m = networkx.degree_centrality(g)
             l = sorted(m.items(), key = operator.itemgetter(1), 
                        reverse = True)
-        largest_component = max(networkx.connected_components(g), key = len)
+        largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
         x.append(i * 1. / n)
         R += len(largest_component) * 1. / n
         y.append(len(largest_component) * 1. / n)
@@ -324,14 +324,14 @@ def rand(infile):
     random.shuffle(l)
     x = []
     y = []
-    largest_component = max(networkx.connected_components(g), key = len)
+    largest_component = max(networkx.connected_components(g.to_undirected()), key = len) # To undirected
     n = len(g.nodes())
     x.append(0)
     y.append(len(largest_component) * 1. / n)
     R = 0.0
     for i in range(1, n):
         g.remove_node(l.pop(0)[0])
-        largest_component = max(networkx.connected_components(g), key = len)
+        largest_component = max(networkx.connected_components(g.to_undirected()), key = len) ## To undirected
         x.append(i * 1. / n)
         R += len(largest_component) * 1. / n
         y.append(len(largest_component) * 1. / n)
@@ -402,3 +402,4 @@ print("Success")
 # Mac: python robustness_analysis.py 'sample_network.gml'
 # python robustness.py <infile> <outfile> <recalculate>
 # python robustness_analysis.py 'sample_network.gml' 'sample_output.pdf' True
+# python robustness_analysis.py 'final_network.gml' 'final_output.pdf' True
