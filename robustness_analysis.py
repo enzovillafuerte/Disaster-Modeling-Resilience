@@ -27,11 +27,6 @@ networkx.write_gml(G, "sample_network.gml")
 # Combined Matrix Output from Optimization Model
 ##########
 
-connectivity_matrix = pd.read_csv('processed_data/connectivity_matrix.csv')
-
-c_matrix = {
-    (row[''])
-}
 
 
 ###########
