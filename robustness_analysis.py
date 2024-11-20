@@ -1,5 +1,5 @@
 import igraph, networkx, numpy, operator, pylab, random, sys
-
+import pandas as pd
 
 # Sample Network to be ingested into the functions
 G = networkx.Graph()
@@ -22,6 +22,16 @@ G.add_edges_from(edges)
 # Save this graph to a GML file to be used in your robustness analysis
 networkx.write_gml(G, "sample_network.gml")
 
+
+##########
+# Combined Matrix Output from Optimization Model
+##########
+
+connectivity_matrix = pd.read_csv('processed_data/connectivity_matrix.csv')
+
+c_matrix = {
+    (row[''])
+}
 
 
 ###########
