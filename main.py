@@ -414,6 +414,62 @@ nx.write_gml(G, "final_network.gml")
 
 plt.show()
 
+## Final network without backup facilities --------
+
+# Filter for only opened Main Warehouses (excluding Backup Facilities)
+opened_warehouses = set(warehouse for (_, warehouse), connected in community_warehouse_matrix.items() if connected == 1)
+
+# Initialize a directed graph
+G = nx.DiGraph()
+
+# Add nodes for Communities and only opened Main Warehouses
+for community in C:
+    G.add_node(community, label="Community", color='blue', size=800)
+for warehouse in I:
+    if warehouse in opened_warehouses:  # Add only opened Main Warehouses
+        G.add_node(warehouse, label="Warehouse", color='green', size=150)
+
+# Add edges for Community-to-Warehouse connections
+for (community, warehouse), connected in community_warehouse_matrix.items():
+    if connected == 1 and warehouse in opened_warehouses:
+        G.add_edge(warehouse, community)  # Warehouse serves Community
+
+# Visualize the network
+plt.figure(figsize=(10, 8))
+
+# Assign colors to nodes based on their type for clearer visualization
+color_map = [G.nodes[node]['color'] for node in G]
+
+# Assign node sizes
+node_sizes = [G.nodes[node]['size'] for node in G]
+
+# Use spatial positions based on longitude and latitude
+pos = {node: all_locations[node] for node in G.nodes}
+
+# Draw the graph with node labels and colors
+nx.draw(
+    G, pos, with_labels=True, node_color=color_map, node_size=node_sizes, font_size=6,
+    font_color='black', font_weight='bold', edge_color='gray', arrows=True
+)
+
+# Customize legend
+legend_elements = [
+    Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='Warehouse (Opened)', markerfacecolor='green', markersize=8)
+]
+plt.legend(handles=legend_elements, loc='upper left')
+
+plt.title("Spatially Fixed Network Connectivity Excluding Backup Facilities")
+plt.savefig('images/opt_output_network_flocation_nobackup.png')
+
+# Save the graph to a GML file
+nx.write_gml(G, "final_network_nobackup.gml")
+
+plt.show()
+
+
+
+# -----------
 
 
 ##############################################

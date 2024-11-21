@@ -404,4 +404,6 @@ print("Success")
 # Mac: python robustness_analysis.py 'sample_network.gml'
 # python robustness.py <infile> <outfile> <recalculate>
 # python robustness_analysis.py 'sample_network.gml' 'sample_output.pdf' True
+# python robustness_analysis.py 'final_network_nobackup.gml' 'final_output_nobk1.pdf' True
 # python robustness_analysis.py 'final_network.gml' 'final_output_1.pdf' True
+
