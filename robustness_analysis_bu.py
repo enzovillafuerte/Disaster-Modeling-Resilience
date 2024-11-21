@@ -1,5 +1,6 @@
 import igraph, networkx, numpy, operator, pylab, random, sys
 import pandas as pd
+import numpy as np
 
 # Sample Network to be ingested into the functions
 G = networkx.Graph()
@@ -353,46 +354,71 @@ def main(argv):
         recalculate = True
     else:
         recalculate = False
-    x1, y1, VD = degree(infile, recalculate)
-    x2, y2, VB = betweenness(infile, recalculate)
-    x3, y3, VC = closeness(infile, recalculate)
-    #x4, y4, VE = eigenvector(infile, recalculate)
-    x5, y5, VR = rand(infile)
+    # x1, y1, VD = degree(infile, recalculate)
+    # x2, y2, VB = betweenness(infile, recalculate)
+    # x3, y3, VC = closeness(infile, recalculate)
+    # x4, y4, VE = eigenvector(infile, recalculate)
 
-    pylab.figure(1, dpi = 500)
+    iterations = 200  # Number of iterations for averaging
+    current = 0
+    averageVR = 0  # Store the average vulnerability
+    averagey5 = []  # List to store average y5 values for all iterations
+
+    pylab.figure(1, dpi=500)
     pylab.xlabel(r"Fraction of vertices removed ($\rho$)")
     pylab.ylabel(r"Fractional size of largest component ($\sigma$)")
-    pylab.plot(x1, y1, "b-", alpha = 0.6, linewidth = 2.0)
-    pylab.plot(x2, y2, "g-", alpha = 0.6, linewidth = 2.0)
-    pylab.plot(x3, y3, "r-", alpha = 0.6, linewidth = 2.0)
-    #pylab.plot(x4, y4, "c-", alpha = 0.6, linewidth = 2.0)
-    pylab.plot(x5, y5, "k-", alpha = 0.6, linewidth = 2.0)
-    pylab.legend((r"Degree ($V = %4.3f$)" %(VD), 
-                  "Betweenness ($V = %4.3f$)" %(VB), 
-                  "Closeness ($V = %4.3f$)" %(VC), 
-                  #"Eigenvector ($V = %4.3f$)" %(VE), 
-                  "Random ($V = %4.3f$)" %(VR)), 
-                 loc = "upper right", shadow = False)
 
-    # Inset showing vulnerability values.
-    # labels = [r"$D$", r"$B$", r"$C$", r"$E$", r"$R$"]
-    labels = [r"$D$", r"$B$", r"$C$", r"$R$"]
-    #labels = [r"$R$"]
+    # Loop through the iterations
+    while current < iterations:
+        # Call rand function and get x5, y5, VR for each iteration
+        x5, y5, VR = rand(infile)  # Assuming rand(infile) is defined appropriately
 
-    # V = [VD, VB, VC, VE, VR]
-    V = [VD, VB, VC, VR]
-    #V = [VR]
-    xlocations = numpy.array(range(len(V)))+0.2
+        # Sum the vulnerability values
+        averageVR += VR
+
+        # Initialize averagey5 list on first iteration
+        if current == 0:
+            averagey5 = y5
+        else:
+            # Add y5 values to averagey5 for each iteration
+            for z in range(len(y5)):
+                averagey5[z] += y5[z]
+
+        # Plot each iteration (for intermediate iterations)
+        if current == iterations - 1:
+            # Plot the average results after all iterations
+            averageVR /= iterations  # Calculate the average vulnerability
+            pylab.plot(x5, y5, "k-", alpha=0.6, linewidth=2.0)
+            pylab.legend((r"Random ($V = %4.3f$)" % (averageVR)), loc="upper right", shadow=False)
+
+        else:
+            # Plot the curve for each individual iteration
+            pylab.plot(x5, y5, "k-", alpha=0.6, linewidth=2.0)
+
+        current += 1
+
+    # Average the y5 values
+    for zz in range(len(y5)):
+        averagey5[zz] /= iterations
+
+    # Plot the averaged line after all iterations
+    pylab.plot(x5, averagey5, "r-", alpha=0.8, linewidth=2.5, label=r"Average ($V = %4.3f$)" % (averageVR))
+    pylab.legend(loc = "upper right", shadow = False)
+
+    # Inset showing vulnerability values
+    labels = [r"$R$"]
+    V = [averageVR]
+    xlocations = np.array(range(len(V))) + 0.2
     width = 0.2
     inset = pylab.axes([0.735, 0.45, 0.15, 0.15])
-    pylab.bar(xlocations, V, color = ["b", "g", "r", "c", "k"], 
-              alpha = 0.6, width = width)
+    pylab.bar(xlocations, V, color=["k"], alpha=0.6, width=width)
     pylab.yticks([0.0, 0.25, 0.5])
     pylab.xticks(xlocations + width / 2, labels)
     pylab.xlim(0, xlocations[-1] + width * 2)
     pylab.ylabel(r"$V$")
 
-    pylab.savefig(outfile, format = "pdf")
+    # Save the plot to the output file
+    pylab.savefig(outfile, format="pdf")
     pylab.close(1)
 
 
@@ -409,6 +435,6 @@ print("Success")
 # python robustness_analysis.py 'sample_network.gml' 'sample_output.pdf' True
 # python robustness_analysis.py 'final_network_nobackup.gml' 'final_output_nobk1.pdf' True
 # python robustness_analysis.py 'final_network.gml' 'final_output_1.pdf' True
-# python robustness_analysis.py 'final_network_MAIN.gml' 'final_output_AA.pdf' True
-# python robustness_analysis.py 'final_network_MAIN_OnlyWarehouses.gml' 'final_output_BB.pdf' True
+# python robustness_analysis_bu.py 'final_network_MAIN.gml' 'final_output_AABBCC.pdf' True
+# python robustness_analysis_bu.py 'final_network_MAIN_OnlyWarehouses.gml' 'final_output_BBAACC.pdf' True
 

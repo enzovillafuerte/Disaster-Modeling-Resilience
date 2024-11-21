@@ -466,6 +466,12 @@ for warehouse in opened_warehouses:
 for backup in opened_backups:
     G.add_edge(main_warehouse_id, backup)  # Connect all opened backup facilities to the main warehouse
 
+# NEW: Add edges connecting opened warehouses to each other
+for warehouse1 in opened_warehouses:
+    for warehouse2 in opened_warehouses:
+        if warehouse1 != warehouse2:  # Prevent connecting the warehouse to itself
+            G.add_edge(warehouse1, warehouse2)  # Connect all opened main warehouses to each other
+            
 # Step 3: Visualize the network
 plt.figure(figsize=(10, 8))
 
