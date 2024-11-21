@@ -406,4 +406,6 @@ print("Success")
 # python robustness_analysis.py 'sample_network.gml' 'sample_output.pdf' True
 # python robustness_analysis.py 'final_network_nobackup.gml' 'final_output_nobk1.pdf' True
 # python robustness_analysis.py 'final_network.gml' 'final_output_1.pdf' True
+# python robustness_analysis.py 'final_network_MAIN.gml' 'final_output_AA.pdf' True
+# python robustness_analysis.py 'final_network_MAIN_OnlyWarehouses.gml' 'final_output_BB.pdf' True
 

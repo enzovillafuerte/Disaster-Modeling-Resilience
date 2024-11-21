@@ -366,6 +366,7 @@ for backup in J:
     if backup in opened_backups:  # Add only opened Backup Facilities
         G.add_node(backup, label="Backup Facility", color='red', size=100)
 
+
 # Add edges for Community-to-Warehouse connections
 for (community, warehouse), connected in community_warehouse_matrix.items():
     if connected == 1 and warehouse in opened_warehouses:
@@ -414,27 +415,58 @@ nx.write_gml(G, "final_network.gml")
 
 plt.show()
 
-## Final network without backup facilities --------
-
-# Filter for only opened Main Warehouses (excluding Backup Facilities)
+### Main Warehouse Connectivity to the other Opening Facilities
+# Showing only Opened Warehouses and BackUp facilities
+# Filter for only opened Main Warehouses and Backup Facilities
 opened_warehouses = set(warehouse for (_, warehouse), connected in community_warehouse_matrix.items() if connected == 1)
+opened_backups = set(backup for (_, backup), connected in warehouse_backup_matrix.items() if connected == 1)
 
-# Initialize a directed graph
+# Add nodes for Communities, filtering Main Warehouses and Backup Facilities
 G = nx.DiGraph()
 
-# Add nodes for Communities and only opened Main Warehouses
+# Add Community nodes
 for community in C:
     G.add_node(community, label="Community", color='blue', size=800)
+
+# Add Warehouse nodes (Opened Main Warehouses)
 for warehouse in I:
     if warehouse in opened_warehouses:  # Add only opened Main Warehouses
         G.add_node(warehouse, label="Warehouse", color='green', size=150)
+
+# Add Backup Facility nodes (Opened Backup Facilities)
+for backup in J:
+    if backup in opened_backups:  # Add only opened Backup Facilities
+        G.add_node(backup, label="Backup Facility", color='red', size=100)
+
+# Add the Main Warehouse node (if not already present)
+main_warehouse_id = 160001
+if main_warehouse_id not in G.nodes:
+    G.add_node(main_warehouse_id, label="Main Warehouse", color='yellow', size=200)  # Customize color and size as needed
 
 # Add edges for Community-to-Warehouse connections
 for (community, warehouse), connected in community_warehouse_matrix.items():
     if connected == 1 and warehouse in opened_warehouses:
         G.add_edge(warehouse, community)  # Warehouse serves Community
 
-# Visualize the network
+# Add edges for Warehouse-to-Backup connections
+for (warehouse, backup), connected in warehouse_backup_matrix.items():
+    if connected == 1 and backup in opened_backups:
+        G.add_edge(warehouse, backup)  # Warehouse is backed up by Backup Facility
+
+# Add edges for Backup-to-Community connections (inheritance)
+for (community, backup), connected in backup_community_matrix.items():
+    if connected == 1 and backup in opened_backups:
+        G.add_edge(backup, community)  # Backup Facility directly connects to Community
+
+# Add edges connecting opened warehouses to the main warehouse
+for warehouse in opened_warehouses:
+    G.add_edge(main_warehouse_id, warehouse)  # Connect all opened warehouses to the main warehouse
+
+# Add edges connecting opened backup facilities to the main warehouse
+for backup in opened_backups:
+    G.add_edge(main_warehouse_id, backup)  # Connect all opened backup facilities to the main warehouse
+
+# Step 3: Visualize the network
 plt.figure(figsize=(10, 8))
 
 # Assign colors to nodes based on their type for clearer visualization
@@ -455,17 +487,95 @@ nx.draw(
 # Customize legend
 legend_elements = [
     Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
-    Line2D([0], [0], marker='o', color='w', label='Warehouse (Opened)', markerfacecolor='green', markersize=8)
+    Line2D([0], [0], marker='o', color='w', label='Warehouse (Opened)', markerfacecolor='green', markersize=8),
+    Line2D([0], [0], marker='o', color='w', label='Backup Facility (Opened)', markerfacecolor='red', markersize=6),
+    Line2D([0], [0], marker='o', color='w', label='Main Warehouse', markerfacecolor='yellow', markersize=12)  # Add Main Warehouse to legend
 ]
 plt.legend(handles=legend_elements, loc='upper left')
 
-plt.title("Spatially Fixed Network Connectivity Excluding Backup Facilities")
-plt.savefig('images/opt_output_network_flocation_nobackup.png')
+plt.title("Spatially Fixed Network Connectivity Including Opened Facilities")
+plt.savefig('images/opt_output_network_flocation_openedAA.png')
 
-# Save the graph to a GML file
-nx.write_gml(G, "final_network_nobackup.gml")
+# Save the graph as a GML file
+nx.write_gml(G, "final_network_MAIN.gml")
 
 plt.show()
+
+
+### AAAAAA
+
+## Final network without backup facilities --------
+
+# Showing only Opened Main Warehouses and their respective Communities
+# Filter for only opened Main Warehouses
+opened_warehouses = set(warehouse for (_, warehouse), connected in community_warehouse_matrix.items() if connected == 1)
+
+# Add nodes for Communities and Warehouses
+G = nx.DiGraph()
+
+# Add Community nodes
+for community in C:
+    G.add_node(community, label="Community", color='blue', size=800)
+
+# Add Warehouse nodes (Opened Main Warehouses)
+for warehouse in I:
+    if warehouse in opened_warehouses:  # Add only opened Main Warehouses
+        G.add_node(warehouse, label="Warehouse", color='green', size=150)
+
+# Add the Main Warehouse node (if not already present)
+main_warehouse_id = 160001
+if main_warehouse_id not in G.nodes:
+    G.add_node(main_warehouse_id, label="Main Warehouse", color='yellow', size=200)  # Customize color and size as needed
+
+# Add edges for Community-to-Warehouse connections
+for (community, warehouse), connected in community_warehouse_matrix.items():
+    if connected == 1 and warehouse in opened_warehouses:
+        G.add_edge(warehouse, community)  # Warehouse serves Community
+
+# Add edges connecting only main warehouses to other main warehouses
+for warehouse1 in opened_warehouses:
+    for warehouse2 in opened_warehouses:
+        if warehouse1 != warehouse2:  # Prevent connecting the warehouse to itself
+            G.add_edge(warehouse1, warehouse2)  # Connect all opened main warehouses
+
+# Add edges connecting opened warehouses to the main warehouse (single node)
+for warehouse in opened_warehouses:
+    G.add_edge(main_warehouse_id, warehouse)  # Connect all opened warehouses to the main warehouse
+
+# Step 3: Visualize the network
+plt.figure(figsize=(10, 8))
+
+# Assign colors to nodes based on their type for clearer visualization
+color_map = [G.nodes[node]['color'] for node in G]
+
+# Assign node sizes
+node_sizes = [G.nodes[node]['size'] for node in G]
+
+# Use spatial positions based on longitude and latitude (if available)
+pos = {node: all_locations[node] for node in G.nodes}
+
+# Draw the graph with node labels and colors
+nx.draw(
+    G, pos, with_labels=True, node_color=color_map, node_size=node_sizes, font_size=6,
+    font_color='black', font_weight='bold', edge_color='gray', arrows=True
+)
+
+# Customize legend
+legend_elements = [
+    Line2D([0], [0], marker='o', color='w', label='Community', markerfacecolor='blue', markersize=10),
+    Line2D([0], [0], marker='o', color='w', label='Warehouse (Opened)', markerfacecolor='green', markersize=8),
+    Line2D([0], [0], marker='o', color='w', label='Main Warehouse', markerfacecolor='yellow', markersize=12)  # Add Main Warehouse to legend
+]
+plt.legend(handles=legend_elements, loc='upper left')
+
+plt.title("Main Warehouse Connectivity Including Communities")
+plt.savefig('images/opt_output_network_flocation_opened_main.png')
+
+# Save the graph as a GML file
+nx.write_gml(G, "final_network_MAIN_OnlyWarehouses.gml")
+
+plt.show()
+
 
 
 
