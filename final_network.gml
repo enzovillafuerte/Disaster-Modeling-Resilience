@@ -242,19 +242,19 @@ graph [
   ]
   node [
     id 40
-    label "160006"
+    label "160007"
     color "red"
     size 70
   ]
   node [
     id 41
-    label "160009"
+    label "160017"
     color "red"
     size 70
   ]
   node [
     id 42
-    label "160012"
+    label "160028"
     color "red"
     size 70
   ]
@@ -332,7 +332,7 @@ graph [
   ]
   edge [
     source 34
-    target 41
+    target 42
   ]
   edge [
     source 35
@@ -356,7 +356,7 @@ graph [
   ]
   edge [
     source 35
-    target 40
+    target 41
   ]
   edge [
     source 36
@@ -368,7 +368,7 @@ graph [
   ]
   edge [
     source 36
-    target 42
+    target 41
   ]
   edge [
     source 37
@@ -396,7 +396,7 @@ graph [
   ]
   edge [
     source 38
-    target 42
+    target 41
   ]
   edge [
     source 39
@@ -416,7 +416,7 @@ graph [
   ]
   edge [
     source 39
-    target 41
+    target 42
   ]
   edge [
     source 40
@@ -455,76 +455,64 @@ graph [
     target 22
   ]
   edge [
-    source 40
+    source 41
     target 17
   ]
   edge [
-    source 40
+    source 41
     target 18
   ]
   edge [
-    source 40
+    source 41
     target 19
   ]
   edge [
-    source 40
+    source 41
     target 21
   ]
   edge [
-    source 40
+    source 41
     target 23
   ]
   edge [
     source 41
-    target 8
-  ]
-  edge [
-    source 41
-    target 9
-  ]
-  edge [
-    source 41
-    target 10
-  ]
-  edge [
-    source 41
-    target 11
-  ]
-  edge [
-    source 41
-    target 12
-  ]
-  edge [
-    source 41
-    target 15
-  ]
-  edge [
-    source 41
-    target 16
-  ]
-  edge [
-    source 41
-    target 13
-  ]
-  edge [
-    source 41
-    target 14
-  ]
-  edge [
-    source 41
-    target 28
-  ]
-  edge [
-    source 41
-    target 30
-  ]
-  edge [
-    source 42
     target 20
   ]
   edge [
-    source 42
+    source 41
     target 24
+  ]
+  edge [
+    source 41
+    target 26
+  ]
+  edge [
+    source 42
+    target 8
+  ]
+  edge [
+    source 42
+    target 9
+  ]
+  edge [
+    source 42
+    target 10
+  ]
+  edge [
+    source 42
+    target 11
+  ]
+  edge [
+    source 42
+    target 12
+  ]
+  edge [
+    source 42
+    target 15
+  ]
+  edge [
+    source 42
+    target 16
   ]
   edge [
     source 42
@@ -544,6 +532,18 @@ graph [
   ]
   edge [
     source 42
-    target 26
+    target 13
+  ]
+  edge [
+    source 42
+    target 14
+  ]
+  edge [
+    source 42
+    target 28
+  ]
+  edge [
+    source 42
+    target 30
   ]
 ]
