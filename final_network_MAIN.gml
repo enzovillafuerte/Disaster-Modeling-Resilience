@@ -242,19 +242,19 @@ graph [
   ]
   node [
     id 40
-    label "160009"
+    label "160006"
     color "red"
     size 70
   ]
   node [
     id 41
-    label "160027"
+    label "160009"
     color "red"
     size 70
   ]
   node [
     id 42
-    label "160030"
+    label "160012"
     color "red"
     size 70
   ]
@@ -400,7 +400,7 @@ graph [
   ]
   edge [
     source 34
-    target 40
+    target 41
   ]
   edge [
     source 34
@@ -452,7 +452,7 @@ graph [
   ]
   edge [
     source 35
-    target 42
+    target 40
   ]
   edge [
     source 35
@@ -492,7 +492,7 @@ graph [
   ]
   edge [
     source 36
-    target 41
+    target 42
   ]
   edge [
     source 36
@@ -692,39 +692,51 @@ graph [
   ]
   edge [
     source 40
+    target 17
+  ]
+  edge [
+    source 40
+    target 18
+  ]
+  edge [
+    source 40
+    target 19
+  ]
+  edge [
+    source 40
+    target 21
+  ]
+  edge [
+    source 40
+    target 23
+  ]
+  edge [
+    source 41
     target 8
   ]
   edge [
-    source 40
+    source 41
     target 9
   ]
   edge [
-    source 40
+    source 41
     target 10
   ]
   edge [
-    source 40
+    source 41
     target 11
   ]
   edge [
-    source 40
+    source 41
     target 12
   ]
   edge [
-    source 40
+    source 41
     target 15
   ]
   edge [
-    source 40
+    source 41
     target 16
-  ]
-  edge [
-    source 41
-    target 20
-  ]
-  edge [
-    source 41
-    target 24
   ]
   edge [
     source 41
@@ -744,23 +756,11 @@ graph [
   ]
   edge [
     source 42
-    target 17
+    target 20
   ]
   edge [
     source 42
-    target 18
-  ]
-  edge [
-    source 42
-    target 19
-  ]
-  edge [
-    source 42
-    target 21
-  ]
-  edge [
-    source 42
-    target 23
+    target 24
   ]
   edge [
     source 42
