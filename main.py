@@ -293,11 +293,11 @@ G = nx.DiGraph()
 # Add nodes for Communities, Warehouses, and Backup Facilities
 G = nx.DiGraph()
 for community in C:
-    G.add_node(community, label="Community", color='blue', size=800)
+    G.add_node(community, label="Community", color='blue', size=150)
 for warehouse in I:
-    G.add_node(warehouse, label="Warehouse", color='green', size=150)
+    G.add_node(warehouse, label="Warehouse", color='green', size=80)
 for backup in J:
-    G.add_node(backup, label="Backup Facility", color='red', size=100)
+    G.add_node(backup, label="Backup Facility", color='red', size=40)
 
 # Add edges for Community-to-Warehouse connections
 for (community, warehouse), connected in community_warehouse_matrix.items():
@@ -358,13 +358,13 @@ opened_backups = set(backup for (_, backup), connected in warehouse_backup_matri
 # Add nodes for Communities, filtering Main Warehouses and Backup Facilities
 G = nx.DiGraph()
 for community in C:
-    G.add_node(community, label="Community", color='blue', size=800)
+    G.add_node(community, label="Community", color='blue', size=100)
 for warehouse in I:
     if warehouse in opened_warehouses:  # Add only opened Main Warehouses
         G.add_node(warehouse, label="Warehouse", color='green', size=150)
 for backup in J:
     if backup in opened_backups:  # Add only opened Backup Facilities
-        G.add_node(backup, label="Backup Facility", color='red', size=100)
+        G.add_node(backup, label="Backup Facility", color='red', size=70)
 
 
 # Add edges for Community-to-Warehouse connections
@@ -426,7 +426,7 @@ G = nx.DiGraph()
 
 # Add Community nodes
 for community in C:
-    G.add_node(community, label="Community", color='blue', size=800)
+    G.add_node(community, label="Community", color='blue', size=100)
 
 # Add Warehouse nodes (Opened Main Warehouses)
 for warehouse in I:
@@ -436,7 +436,7 @@ for warehouse in I:
 # Add Backup Facility nodes (Opened Backup Facilities)
 for backup in J:
     if backup in opened_backups:  # Add only opened Backup Facilities
-        G.add_node(backup, label="Backup Facility", color='red', size=100)
+        G.add_node(backup, label="Backup Facility", color='red', size=70)
 
 # Add the Main Warehouse node (if not already present)
 main_warehouse_id = 160001
@@ -521,7 +521,7 @@ G = nx.DiGraph()
 
 # Add Community nodes
 for community in C:
-    G.add_node(community, label="Community", color='blue', size=800)
+    G.add_node(community, label="Community", color='blue', size=100)
 
 # Add Warehouse nodes (Opened Main Warehouses)
 for warehouse in I:

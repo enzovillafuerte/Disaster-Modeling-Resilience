@@ -4,193 +4,193 @@ graph [
     id 0
     label "Cusco"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 1
     label "Ccorca"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 2
     label "Poroy"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 3
     label "San Jer&#243;nimo"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 4
     label "San Sebasti&#225;n"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 5
     label "Santiago"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 6
     label "Saylla"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 7
     label "Wanchaq"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 8
     label "Anta"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 9
     label "Ancahuasi"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 10
     label "Cachimayo"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 11
     label "Chinchaypujio"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 12
     label "Huarocondo"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 13
     label "Limatambo"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 14
     label "Mollepata"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 15
     label "Pucyura"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 16
     label "Zurite"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 17
     label "Calca"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 18
     label "Coya"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 19
     label "Lamay"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 20
     label "Lares"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 21
     label "Pisac"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 22
     label "San Salvador"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 23
     label "Taray"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 24
     label "Yanatile"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 25
     label "Urubamba"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 26
     label "Chinchero"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 27
     label "Huayllabamba"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 28
     label "Machupicchu"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 29
     label "Maras"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 30
     label "Ollantaytambo"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 31
     label "Yucay"
     color "blue"
-    size 800
+    size 100
   ]
   node [
     id 32
@@ -244,19 +244,19 @@ graph [
     id 40
     label "160009"
     color "red"
-    size 100
+    size 70
   ]
   node [
     id 41
     label "160027"
     color "red"
-    size 100
+    size 70
   ]
   node [
     id 42
     label "160030"
     color "red"
-    size 100
+    size 70
   ]
   edge [
     source 32
