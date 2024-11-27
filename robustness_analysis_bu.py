@@ -438,4 +438,5 @@ print("Success")
 # python robustness_analysis_bu.py 'final_network_MAIN.gml' 'final_output_AABBCC.pdf' True
 # python robustness_analysis_bu.py 'final_network_MAIN.gml' 'final_output_Testing-1-backup.pdf' True
 # python robustness_analysis_bu.py 'final_network_MAIN_OnlyWarehouses.gml' 'final_output_BBAACC.pdf' True
+# Sensitivity: python robustness_analysis_bu.py 'final_network_MAIN.gml' 'final_output_Sensitivity.pdf' True
 

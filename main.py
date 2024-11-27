@@ -123,6 +123,31 @@ model.optimize()
 # Output results
 if model.status == GRB.OPTIMAL:
     print("Optimal solution found:")
+    
+    # Printing output
+    # Calculate the total cost
+    total_cost = (
+        gp.quicksum(cost_main[i] * x[i].x for i in I).getValue() +
+        gp.quicksum(demand[j] * dist_main[i, j] * y[i, j].x for i in I for j in C).getValue() +
+        alpha * (
+            gp.quicksum(cost_backup[k] * z[k].x for k in J).getValue() +
+            gp.quicksum(dist_backup[i, k] * w[i, k].x for i in I for k in J).getValue()
+        )
+    )
+
+    print(f"\nTotal cost: {total_cost:.2f}")
+
+    # Collect main warehouses and backup facilities
+    main_warehouses = [i for i in I if x[i].x > 0.5]
+    backup_facilities = [k for k in J if z[k].x > 0.5]
+    print(f"\nMain warehouses: {main_warehouses}")
+    print(f"Backup facilities: {backup_facilities}")
+    
+    # Combine both into a single output
+    print(f"\nOpened main warehouses and backup facilities (same line): {main_warehouses + backup_facilities}")
+    
+    
+    
     print("\nMain warehouses to open:")
     for i in I:
         if x[i].x > 0.5:
